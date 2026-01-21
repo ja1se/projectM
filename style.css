@@ -1,3 +1,8 @@
+/* font */
+@font-face {
+    font-family: 'gmarket';
+    src: url(font/GmarketSansMedium.otf);
+}
 /* Reset & Base */
 * {
     margin: 0;
@@ -6,7 +11,7 @@
 }
 
 body {
-    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    font-family: 'gmarket', 'Inter', 'Noto Sans KR', sans-serif;
     color: #1d1d1f;
     background-color: #fff;
     line-height: 1.6;
@@ -965,4 +970,88 @@ a {
     .article-main-image {
         height: 300px;
     }
+}
+
+
+/* ====================================
+popup */
+.popup-container {
+    position: fixed;
+    display: flex;
+    z-index: 9999;
+    top: 10%;
+    left: 50%;
+    width: 500px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.popup{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    background: white;
+    text-align: left;
+    width: 500px;
+    height: 270px;
+    font-size: 1em;
+    transform: translate(-50%,10%);
+    box-shadow: 1px 2px 30px rgba(0,0,0,.5);
+    padding: 2em;
+    border-radius: 1em;
+}
+.top-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px; /* 버튼 사이 간격 */
+    z-index: 20; /* 다른 요소보다 위에 오도록 */
+}
+.status-icon {
+    position: absolute;
+    top: -30px; /* 위로 절반쯤 튀어나오게 설정 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    background-color: #f5f5f5; /* 강렬한 레드 */
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.status-icon img {
+    color: white;
+    width: 60px;
+}
+.popup #btn{
+    position: relative;
+    background-color: #1d1d1f;
+    border-radius: 12px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5f5f5;
+    font-size: 1em;
+    font-weight: 700;
+    width: 70%;
+    left: 15%;
+    transition: transform 0.2s, background-color 0.2s;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+}
+.popup h1 {
+    font-family: 'gmarket';
+    margin-top: 15px;
+}
+.popup p {
+    margin-top: 15px;
+}
+.popup #btn:hover{
+    background-color: #7f0019;
+    transform: translateY(-2px);
 }
