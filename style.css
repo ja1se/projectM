@@ -1049,6 +1049,7 @@ popup */
     margin-top: 15px;
 }
 .popup p {
+    font-family: 'gmarket';
     margin-top: 15px;
 }
 .popup #btn:hover{
