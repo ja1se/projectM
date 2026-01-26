@@ -244,12 +244,12 @@ class smoothscroll {
 // 초기화
 document.addEventListener("DOMContentLoaded", () => {
   new carousel();
-  new tabFilter();
-  new floatingButtons();
-  new appBanner();
-  new mobileMenu();
-  new lazyLoad();
-  new smoothScroll();
+  new tabfilter();
+  new floatingbuttons();
+  new appbanner();
+  new mobilemenu();
+  new lazyload();
+  new smoothscroll();
 
   // 전역 장바구니 인스턴스
   window.cart = new cart();
@@ -296,11 +296,3 @@ const setupSearch = () => {
 
 setupSearch();
 
-// popup
-
-// 버튼 선택
-const btn = document.querySelector('.close');
-// 클릭 이벤트 → 팝업 닫기
-btn.addEventListener("click", () => {
-  document.querySelector(".popup").style.display = "none";
-});
