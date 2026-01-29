@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="popup-container">
+    <div class="popup-container" id="popupContainer">
       <div class="popup">
         <div class="top-controls">
             <button class="control btn min-btn"><i class="fa-solid fa-minus"></i></button>
@@ -53,6 +53,10 @@
         <h1 class="status-title">잠깐만요!✋🏻</h1>
         <p>이 프로젝트는 구직용 포트폴리오입니다. 무인양품과 무관함을 알려드립니다.</p>
         <button class="close" id="btn">OK</button>
+        <div class="dont-show-again">
+        <input type="checkbox" id="todayCheck">
+        <label for="todayCheck">오늘 하루 보지 않기</label>
+      </div>
       </div>
     </div>
     <!-- App Download Banner -->
@@ -352,175 +356,337 @@
       <!-- Featured Collections -->
       <section class="section collections">
         <div class="collection-container">
+          <!-- Left: Sticky Container -->
+          <div class="sticky-container">
+            <img src="images/2025winter.png" alt="2025 Winter Styling" />
+            <div class="text-overlay">
+              <p class="description">겨울의 시작, 포근한 온기를 전하는 25AW 아이템</p>
+              <h2 class="title">2025 Winter Styling</h2>
+            </div>
+          </div>
+          <!-- Right: Articles Background -->
+            <div class="articles-background">
+              <!-- Article 1: 향기로 살아가다 -->
+              <article class="featured-article">
+                <a href="#" class="article-link">
+                  <div class="article-main-image">
+                    <img src="images/fragrance.png" alt="NEW 프레그런스" />
+                  </div>
+                  <div class="article-content">
+                    <div class="article-descriptions">
+                      <h3>향기로 살아가다</h3>
+                      <p>식물의 힘을 살려 자연스럽고 부드러운 향의 무인양품 프레그런스<br />오일. 기분이나 장소에 어울리는 향을 선택해 보세요.</p>
+                    </div>
+                                  </a>
+                                  <div class="product-cards">
+                    <div class="product-card">
+                      <div class="product-image">
+                        <img src="images/oilwoody.png" alt="인테리어 프레그런스 오일 우디 디퓨저 100ml" />
+                      </div>
+                      <h4>인테리어 프레그런스 오일<br />우디 디퓨저 100ml</h4>
+                      <p class="price">14,900원</p>
+                    </div>
+                    <div class="product-card">
+                      <div class="product-image">
+                        <img src="images/floraloil.png" alt="인테리어 프레그런스 오일 리필용 플로럴 디퓨저 200ml" />
+                      </div>
+                      <h4>인테리어 프레그런스 오일<br />리필용 플로럴 디퓨저…<br />200ml</h4>
+                      <p class="price">19,900원</p>
+                    </div>
+                    <div class="product-card">
+                      <div class="product-image">
+                        <img src="images/rattanstick.png" alt="라탄 스틱 200ml용" />
+                      </div>
+                      <h4>라탄 스틱 200ml용</h4>
+                      <p class="price">3,900원</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!-- Article 2: 나만의 주방 -->
+              <article class="featured-article">
+                <a href="#" class="article-link">
+                  <div class="article-main-image">
+                    <img src="images/cookingtool.png" alt="조리도구· 식기 시리즈" />
+                  </div>
+                  <div class="article-descriptions">
+                    <h3>나만의 주방을 가꾸는 방법</h3>
+                    <p>맛있는 음식, 즐거운 식사 시간을 만드는 방법. 편리하고 내구성이<br />좋은 조리도구부터 어떤 음식에도 조화롭게 어울리는 식기까지.</p>
+                  </div>
+                </a>
+                <div class="product-cards">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/glasscup.png" alt="유리 컵· 약 350ml" />
+                    </div>
+                    <h4>유리 컵 · 약 350ml</h4>
+                    <p class="price">2,900원</p>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/fan.png" alt="굽는 면적을 넓힌 다용도 프라이팬 20cm" />
+                    </div>
+                    <h4>굽는 면적을 넓힌 다용도<br />프라이팬 20cm</h4>
+                    <p class="price">29,900원</p>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/spoon.png" alt="폴리프로필렌 밥이 붙지 않는 주걱" />
+                    </div>
+                    <h4>폴리프로필렌 밥이 붙지<br />않는 주걱</h4>
+                    <p class="price">5,900원</p>
+                  </div>
+                </div>
+              </article>
+              <!-- Article 3: 파자마 -->
+              <article class="featured-article">
+                <a href="#" class="article-link">
+                  <div class="article-main-image">
+                    <img src="images/lightpajamas.png" alt="가볍고 편안한 파자마" />
+                  </div>
+                  <div class="article-descriptions">
+                    <h3>소중한 사람과 함께 입는 파자마</h3>
+                    <p>커플, 가족, 친구 등 소중한 사람들과 함께 입기 좋은 무인양품<br />파자마 시리즈. 가볍고 편안한 파자마를 지금 만나보세요.</p>
+                  </div>
+                </a>
+                <div class="product-cards">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/womenpajamas.png" alt="여성 사이드 심리스 플란넬 긴소매 파자마" />
+                    </div>
+                    <h4>여성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
+                    <p class="price">69,900원</p>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/menpajamas.png" alt="남성 사이드 심리스 플란넬 긴소매 파자마" />
+                    </div>
+                    <h4>남성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
+                    <p class="price">69,900원</p>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/mencolor.png" alt="남성 정전기 발생이 적은 화이버 스탠드 칼라 파자마" />
+                    </div>
+                    <h4>남성 정전기 발생이 적은<br />화이버 스탠드 칼라 파자마</h4>
+                    <p class="price">69,900원</p>
+                  </div>
+                </div>
+              </article>
+              <!-- Article 4: 특가혜택 -->
+              <article class="featured-article">
+                <a href="#" class="article-link">
+                  <div class="article-main-image">
+                    <img src="images/mujicraft.png" alt="한정 수량 특가 혜택" />
+                  </div>
+                  <div class="article-descriptions">
+                    <h3>좋은데 저렴하니까!</h3>
+                    <p>무인양품이 준비한 특별한 쇼핑 즐기기! 좋은데 저렴한 무인양품의<br />다양한 상품을 지금 바로 만나보세요.</p>
+                  </div>
+                </a>
+                <div class="product-cards">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/skirt.png" alt="워셔블 퀼팅 미니스커트" />
+                    </div>
+                    <h4>워셔블 퀼팅 미니스커트</h4>
+                    <p class="original-price">59,900원</p>
+                    <div class="discount-price">
+                      <span class="discount">67%</span>
+                      <span class="price">19,900원</span>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/fullover.png" alt="이중 편직 테리 풀오버 파카" />
+                    </div>
+                    <h4>이중 편직 테리 풀오버<br />파카</h4>
+                    <p class="original-price">79,900원</p>
+                    <div class="discount-price">
+                      <span class="discount">50%</span>
+                      <span class="price">39,900원</span>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/inner.png" alt="UV 컷 건조가 빠른 하프 톱 브라" />
+                    </div>
+                    <h4>UV 컷 건조가 빠른 하프<br />톱 브라</h4>
+                    <p class="original-price">29,900원</p>
+                    <div class="discount-price">
+                      <span class="discount">60%</span>
+                      <span class="price">11,900원</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+          </div>
+        </div>
+        <div class="collection-container reverse">
           <!-- Right: Sticky Container -->
           <div class="sticky-container">
             <img src="images/2025winter.png" alt="2025 Winter Styling" />
-            <div class="item-dot item-dot-1">
-              <div class="border"></div>
+            <div class="text-overlay">
+              <p class="description">겨울의 시작, 포근한 온기를 전하는 25AW 아이템</p>
+              <h2 class="title">2025 Winter Styling</h2>
             </div>
-            <div class="item-dot item-dot-2">
-              <div class="border"></div>
-            </div>
-            <div class="item-dot item-dot-3">
-              <div class="border"></div>
-            </div>
-            <p class="description">겨울의 시작, 포근한 온기를 전하는 25AW 아이템</p>
-            <h2 class="title">2025 Winter Styling</h2>
           </div>
           <!-- Left: Articles Background -->
-          <div class="articles-background">
-            <!-- Article 1: 향기로 살아가다 -->
-            <article class="featured-article">
-              <a href="#" class="article-link">
-                <div class="article-main-image">
-                  <img src="images/fragrance.png" alt="NEW 프레그런스" />
-                </div>
-                <div class="article-descriptions">
-                  <h3>향기로 살아가다</h3>
-                  <p>식물의 힘을 살려 자연스럽고 부드러운 향의 무인양품 프레그런스<br />오일. 기분이나 장소에 어울리는 향을 선택해 보세요.</p>
-                </div>
-              </a>
-              <div class="product-cards">
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/oilwoody.png" alt="인테리어 프레그런스 오일 우디 디퓨저 100ml" />
+            <div class="articles-background">
+              <!-- Article 1: 향기로 살아가다 -->
+              <article class="featured-article">
+                <a href="#" class="article-link">
+                  <div class="article-main-image">
+                    <img src="images/fragrance.png" alt="NEW 프레그런스" />
                   </div>
-                  <h4>인테리어 프레그런스 오일<br />우디 디퓨저 100ml</h4>
-                  <p class="price">14,900원</p>
-                </div>
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/floraloil.png" alt="인테리어 프레그런스 오일 리필용 플로럴 디퓨저 200ml" />
-                  </div>
-                  <h4>인테리어 프레그런스 오일<br />리필용 플로럴 디퓨저…<br />200ml</h4>
-                  <p class="price">19,900원</p>
-                </div>
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/rattanstick.png" alt="라탄 스틱 200ml용" />
-                  </div>
-                  <h4>라탄 스틱 200ml용</h4>
-                  <p class="price">3,900원</p>
-                </div>
-              </div>
-            </article>
-            <!-- Article 2: 나만의 주방 -->
-            <article class="featured-article">
-              <a href="#" class="article-link">
-                <div class="article-main-image">
-                  <img src="images/cookingtool.png" alt="조리도구· 식기 시리즈" />
-                </div>
-                <div class="article-descriptions">
-                  <h3>나만의 주방을 가꾸는 방법</h3>
-                  <p>맛있는 음식, 즐거운 식사 시간을 만드는 방법. 편리하고 내구성이<br />좋은 조리도구부터 어떤 음식에도 조화롭게 어울리는 식기까지.</p>
-                </div>
-              </a>
-              <div class="product-cards">
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/glasscup.png" alt="유리 컵· 약 350ml" />
-                  </div>
-                  <h4>유리 컵 · 약 350ml</h4>
-                  <p class="price">2,900원</p>
-                </div>
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/fan.png" alt="굽는 면적을 넓힌 다용도 프라이팬 20cm" />
-                  </div>
-                  <h4>굽는 면적을 넓힌 다용도<br />프라이팬 20cm</h4>
-                  <p class="price">29,900원</p>
-                </div>
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/spoon.png" alt="폴리프로필렌 밥이 붙지 않는 주걱" />
-                  </div>
-                  <h4>폴리프로필렌 밥이 붙지<br />않는 주걱</h4>
-                  <p class="price">5,900원</p>
-                </div>
-              </div>
-            </article>
-            <!-- Article 3: 파자마 -->
-            <article class="featured-article">
-              <a href="#" class="article-link">
-                <div class="article-main-image">
-                  <img src="images/lightpajamas.png" alt="가볍고 편안한 파자마" />
-                </div>
-                <div class="article-descriptions">
-                  <h3>소중한 사람과 함께 입는 파자마</h3>
-                  <p>커플, 가족, 친구 등 소중한 사람들과 함께 입기 좋은 무인양품<br />파자마 시리즈. 가볍고 편안한 파자마를 지금 만나보세요.</p>
-                </div>
-              </a>
-              <div class="product-cards">
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/womenpajamas.png" alt="여성 사이드 심리스 플란넬 긴소매 파자마" />
-                  </div>
-                  <h4>여성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
-                  <p class="price">69,900원</p>
-                </div>
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/menpajamas.png" alt="남성 사이드 심리스 플란넬 긴소매 파자마" />
-                  </div>
-                  <h4>남성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
-                  <p class="price">69,900원</p>
-                </div>
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/mencolor.png" alt="남성 정전기 발생이 적은 화이버 스탠드 칼라 파자마" />
-                  </div>
-                  <h4>남성 정전기 발생이 적은<br />화이버 스탠드 칼라 파자마</h4>
-                  <p class="price">69,900원</p>
-                </div>
-              </div>
-            </article>
-            <!-- Article 4: 특가혜택 -->
-            <article class="featured-article">
-              <a href="#" class="article-link">
-                <div class="article-main-image">
-                  <img src="images/mujicraft.png" alt="한정 수량 특가 혜택" />
-                </div>
-                <div class="article-descriptions">
-                  <h3>좋은데 저렴하니까!</h3>
-                  <p>무인양품이 준비한 특별한 쇼핑 즐기기! 좋은데 저렴한 무인양품의<br />다양한 상품을 지금 바로 만나보세요.</p>
-                </div>
-              </a>
-              <div class="product-cards">
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/skirt.png" alt="워셔블 퀼팅 미니스커트" />
-                  </div>
-                  <h4>워셔블 퀼팅 미니스커트</h4>
-                  <p class="original-price">59,900원</p>
-                  <div class="discount-price">
-                    <span class="discount">67%</span>
-                    <span class="price">19,900원</span>
+                  <div class="article-content">
+                    <div class="article-descriptions">
+                      <h3>향기로 살아가다</h3>
+                      <p>식물의 힘을 살려 자연스럽고 부드러운 향의 무인양품 프레그런스<br />오일. 기분이나 장소에 어울리는 향을 선택해 보세요.</p>
+                    </div>
+                                  </a>
+                                  <div class="product-cards">
+                    <div class="product-card">
+                      <div class="product-image">
+                        <img src="images/oilwoody.png" alt="인테리어 프레그런스 오일 우디 디퓨저 100ml" />
+                      </div>
+                      <h4>인테리어 프레그런스 오일<br />우디 디퓨저 100ml</h4>
+                      <p class="price">14,900원</p>
+                    </div>
+                    <div class="product-card">
+                      <div class="product-image">
+                        <img src="images/floraloil.png" alt="인테리어 프레그런스 오일 리필용 플로럴 디퓨저 200ml" />
+                      </div>
+                      <h4>인테리어 프레그런스 오일<br />리필용 플로럴 디퓨저…<br />200ml</h4>
+                      <p class="price">19,900원</p>
+                    </div>
+                    <div class="product-card">
+                      <div class="product-image">
+                        <img src="images/rattanstick.png" alt="라탄 스틱 200ml용" />
+                      </div>
+                      <h4>라탄 스틱 200ml용</h4>
+                      <p class="price">3,900원</p>
+                    </div>
                   </div>
                 </div>
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/fullover.png" alt="이중 편직 테리 풀오버 파카" />
+              </article>
+              <!-- Article 2: 나만의 주방 -->
+              <article class="featured-article">
+                <a href="#" class="article-link">
+                  <div class="article-main-image">
+                    <img src="images/cookingtool.png" alt="조리도구· 식기 시리즈" />
                   </div>
-                  <h4>이중 편직 테리 풀오버<br />파카</h4>
-                  <p class="original-price">79,900원</p>
-                  <div class="discount-price">
-                    <span class="discount">50%</span>
-                    <span class="price">39,900원</span>
+                  <div class="article-descriptions">
+                    <h3>나만의 주방을 가꾸는 방법</h3>
+                    <p>맛있는 음식, 즐거운 식사 시간을 만드는 방법. 편리하고 내구성이<br />좋은 조리도구부터 어떤 음식에도 조화롭게 어울리는 식기까지.</p>
+                  </div>
+                </a>
+                <div class="product-cards">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/glasscup.png" alt="유리 컵· 약 350ml" />
+                    </div>
+                    <h4>유리 컵 · 약 350ml</h4>
+                    <p class="price">2,900원</p>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/fan.png" alt="굽는 면적을 넓힌 다용도 프라이팬 20cm" />
+                    </div>
+                    <h4>굽는 면적을 넓힌 다용도<br />프라이팬 20cm</h4>
+                    <p class="price">29,900원</p>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/spoon.png" alt="폴리프로필렌 밥이 붙지 않는 주걱" />
+                    </div>
+                    <h4>폴리프로필렌 밥이 붙지<br />않는 주걱</h4>
+                    <p class="price">5,900원</p>
                   </div>
                 </div>
-                <div class="product-card">
-                  <div class="product-image">
-                    <img src="images/inner.png" alt="UV 컷 건조가 빠른 하프 톱 브라" />
+              </article>
+              <!-- Article 3: 파자마 -->
+              <article class="featured-article">
+                <a href="#" class="article-link">
+                  <div class="article-main-image">
+                    <img src="images/lightpajamas.png" alt="가볍고 편안한 파자마" />
                   </div>
-                  <h4>UV 컷 건조가 빠른 하프<br />톱 브라</h4>
-                  <p class="original-price">29,900원</p>
-                  <div class="discount-price">
-                    <span class="discount">60%</span>
-                    <span class="price">11,900원</span>
+                  <div class="article-descriptions">
+                    <h3>소중한 사람과 함께 입는 파자마</h3>
+                    <p>커플, 가족, 친구 등 소중한 사람들과 함께 입기 좋은 무인양품<br />파자마 시리즈. 가볍고 편안한 파자마를 지금 만나보세요.</p>
+                  </div>
+                </a>
+                <div class="product-cards">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/womenpajamas.png" alt="여성 사이드 심리스 플란넬 긴소매 파자마" />
+                    </div>
+                    <h4>여성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
+                    <p class="price">69,900원</p>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/menpajamas.png" alt="남성 사이드 심리스 플란넬 긴소매 파자마" />
+                    </div>
+                    <h4>남성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
+                    <p class="price">69,900원</p>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/mencolor.png" alt="남성 정전기 발생이 적은 화이버 스탠드 칼라 파자마" />
+                    </div>
+                    <h4>남성 정전기 발생이 적은<br />화이버 스탠드 칼라 파자마</h4>
+                    <p class="price">69,900원</p>
                   </div>
                 </div>
-              </div>
-            </article>
+              </article>
+              <!-- Article 4: 특가혜택 -->
+              <article class="featured-article">
+                <a href="#" class="article-link">
+                  <div class="article-main-image">
+                    <img src="images/mujicraft.png" alt="한정 수량 특가 혜택" />
+                  </div>
+                  <div class="article-descriptions">
+                    <h3>좋은데 저렴하니까!</h3>
+                    <p>무인양품이 준비한 특별한 쇼핑 즐기기! 좋은데 저렴한 무인양품의<br />다양한 상품을 지금 바로 만나보세요.</p>
+                  </div>
+                </a>
+                <div class="product-cards">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/skirt.png" alt="워셔블 퀼팅 미니스커트" />
+                    </div>
+                    <h4>워셔블 퀼팅 미니스커트</h4>
+                    <p class="original-price">59,900원</p>
+                    <div class="discount-price">
+                      <span class="discount">67%</span>
+                      <span class="price">19,900원</span>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/fullover.png" alt="이중 편직 테리 풀오버 파카" />
+                    </div>
+                    <h4>이중 편직 테리 풀오버<br />파카</h4>
+                    <p class="original-price">79,900원</p>
+                    <div class="discount-price">
+                      <span class="discount">50%</span>
+                      <span class="price">39,900원</span>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/inner.png" alt="UV 컷 건조가 빠른 하프 톱 브라" />
+                    </div>
+                    <h4>UV 컷 건조가 빠른 하프<br />톱 브라</h4>
+                    <p class="original-price">29,900원</p>
+                    <div class="discount-price">
+                      <span class="discount">60%</span>
+                      <span class="price">11,900원</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
             <!-- More Button -->
             <a href="#" class="more-link">기획전 더보기</a>
           </div>
@@ -624,12 +790,26 @@
     </div>
     <script src="script.js"></script>
     <script>
-      // 버튼 선택 
-      const btn = document.querySelector('.close');
-      // 클릭 이벤트 → 팝업 닫기
-      btn.addEventListener("click", () => {
-        document.querySelector(".popup").style.display = "none";
-      });
+  const popup = document.querySelector('.popup-container');
+  const closeBtn = document.querySelector('.close');
+  const todayCheck = document.querySelector('#todayCheck');
+  document.addEventListener('DOMContentLoaded', () => {
+      const expires = localStorage.getItem('popupHiddenUntil');
+      const now = new Date().getTime();
+      if (!expires || now > expires) {
+          popup.style.display = 'flex';
+      } else {
+          popup.style.display = 'none';
+      }
+  });
+  closeBtn.addEventListener('click', () => {
+      if (todayCheck.checked) {
+          const now = new Date();
+          const expiryTime = now.getTime() + (24 * 60 * 60 * 1000);
+          localStorage.setItem('popupHiddenUntil', expiryTime);
+      }
+      popup.style.display = 'none';
+  });
     </script>
   </body>
 </html>
