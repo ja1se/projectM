@@ -110,36 +110,11 @@ a {
     background-size: cover;
 }
 
-.navigation {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-left: 60px;
-    flex: 1;
-    white-space: nowrap;
-}
-
-.nav-link {
-    font-size: 15px;
-    font-weight: 600;
-    color: #3c3c43;
-    transition: color 0.3s;
-}
-
-.nav-link:hover {
-    color: #1d1d1f;
-}
-
-.nav-divider {
-    width: 1px;
-    height: 14px;
-    background-color: #d8d8d9;
-}
-
 .header-actions {
     display: flex;
     align-items: center;
     gap: 24px;
+    margin-left: auto;
 }
 
 .icon-button {
@@ -160,6 +135,149 @@ a {
     font-weight: 600;
     color: #1d1d1f;
 }
+/* GNB depth3 디자인 */
+
+/* GNB 영역 */
+.wrap {
+  margin-left: 32px;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    white-space: nowrap;
+}
+.nav .depth1 {
+    display: flex;
+    align-items: center;
+}
+
+.nav .depth1-item {
+  position: relative;
+}
+
+.nav .depth1-title {
+display: block;
+padding: 0 10px;
+text-decoration: none;
+font-weight: 600;
+white-space: nowrap;
+font-size: 15px;
+color: #3c3c43;
+transition: color 0.3s;
+}
+
+.nav .depth1-title:hover {
+    color: #1d1d1f;
+}
+
+.nav .nav-divider {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background-color: #d8d8d9;
+    margin: 0 10px;
+}
+
+/* GNB ul,li 불렛 제거 */
+.nav ul, 
+.nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav a {
+  text-decoration: none;
+}
+/* 메가 메뉴 컨테이너 */
+.nav .mega {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 1000px;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.nav .depth1-item:hover .mega {
+  display: block;
+}
+
+.nav .inner {
+  display: flex;
+  min-height: 350px;
+}
+
+/* 2Depth: 왼쪽 회색 사이드바 */
+.nav .depth2 {
+  width: 240px;
+  background-color: #f2f2f2; /* 무인양품 회색 배경 */
+}
+
+.nav .depth2-item {
+  position: static; /* 3Depth가 .inner 기준으로 위치하게 함 */
+}
+
+.nav .depth2-item > a {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 2Depth 항목에 마우스를 올렸을 때 */
+.nav .depth2-item:hover {
+  background-color: #ffffff; /* 배경색 흰색으로 반전 */
+}
+
+.nav .depth2-item:hover > a {
+  font-weight: bold;
+}
+
+/* 화살표 아이콘 생성 (>) */
+.nav .depth2-item > a::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  transform: rotate(45deg);
+  margin-top: 4px;
+}
+
+/* 3Depth: 오른쪽 메뉴 영역 */
+.nav .depth3 {
+  display: none; /* 평소엔 숨김 */
+  position: absolute;
+  top: 0;
+  left: 240px; /* depth2 너비만큼 띄움 */
+  width: calc(100% - 240px);
+  height: 100%;
+  padding: 25px 40px;
+  flex-direction: column;
+  flex-wrap: wrap; /* 내용이 많으면 옆으로 줄바꿈 */
+  align-content: flex-start;
+  gap: 15px 50px;
+}
+
+/* 2Depth에 호버했을 때 해당 3Depth 보여주기 */
+.nav .depth2-item:hover .depth3 {
+  display: flex;
+}
+
+.nav .depth3-item a {
+  font-size: 14px;
+  color: #666;
+}
+
+.nav .depth3-item a:hover {
+  color: #000;
+  text-decoration: underline;
+}
 
 /* Main */
 .main {
@@ -170,84 +288,32 @@ a {
     margin-bottom: 60px;
 }
 
-/* Slide */
-.slide-container {
-    position: relative;
-    width: 100%;
-    height: 680px;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
+/* Swiper */
+/* 슬라이더 컨테이너 크기 설정 */
+.swiper {
+  width: 100%;
+  height: 400px;
 }
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 680px;
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 0.8s ease-in-out;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: 0 0 0 rgba(0, 0, 0, 0.3);
+/* 슬라이드 스타일 */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  font-size: 24px;
+  font-weight: bold;
 }
-.slide.active {
-    opacity: 1;
-    z-index: 2;
-}
-
-.slide img {
+.swiper-slide img {
     width: 100%;
     height: 100%;
+    background: cover;
 }
-
-.slide-content {
-    position: absolute;
-    left: 140px;
-    top: 50%;
-    transform: translateY(-50%);
+.swiper-navigation-icon{
+    color:rgba(64, 64, 64, 0.095);
+    font-size: 1px;
+}
+.swiper-pagination-bullet swiper-pagination-bullet-active{
     color: #1d1d1f;
-}
-
-.slide-content h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 16px;
-}
-
-.slide-content p {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.slide-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    z-index: 10;
-}
-
-.slide-button.prev {
-    left: 80px;
-}
-
-.slide-button.next {
-    right: 80px;
-}
-
-.slide-indicator {
-    position: absolute;
-    bottom: 130px;
-    left: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    padding: 8px 17px;
-    border-radius: 30px;
-    font-size: 16px;
-    z-index: 11;
 }
 
 /* Categories */
@@ -408,8 +474,8 @@ a {
 .collection-container {
   display: flex;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: auto;
+  position: relative;
 }
 .collection-container.reverse {
   flex-direction: row-reverse;
@@ -417,8 +483,8 @@ a {
 /* [왼쪽] 스크롤 박스 */
 .articles-background {
   flex: 1;
-  height: 100%;
-  overflow-y: auto; 
+  height: auto;
+  overflow-y: visible; 
   padding: 50px 24px;
   background: #f2f1ed;
   box-sizing: border-box;
@@ -434,8 +500,10 @@ a {
 /* [오른쪽] 고정 박스 */
 .sticky-container {
   flex: 1;             /* 가로 50% */
-  height: 100%;
-  position: relative;  /* 텍스트 배치를 위한 기준점 */
+  height: 100vh;
+  position: sticky;  /* 텍스트 배치를 위한 기준점 */
+  top: 0;             /* 화면 맨 위에 딱 붙음 */
+  overflow: hidden;
 }
 /* 4. 이미지 및 텍스트 스타일 */
 .sticky-container img {
@@ -816,46 +884,77 @@ a {
 }
 @media (min-width: 600px) and (max-width: 1039px) {
     .header {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: none;
-        padding: 0 24px;
+        /* 1. 2단 구조를 위한 설정 */
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between; /* 상단과 하단 사이 간격 최대로 */
+        
+        height: 95px; /* 요청하신 고정 높이 */
+        padding: 12px 24px; /* 위아래 내부 여백 */
+        box-sizing: border-box;
+        background-color: #fff;
     }
-    .logo, .header-actions {
-        order: 1;
-        flex: 0 0 auto;
-        margin-top: 10px;
-        width: 100px;
+    .logo {
+        position: absolute;
+        top: 15px;
+        left: 24px;
+        margin: 0;
     }
+
     .header-actions {
-        order: 2;
+        position: absolute;
+        top: 15px;
+        right: 24px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
     }
-    .navigation {
-        order: 3;
-        flex-wrap: wrap;
-        padding: 1px 1px;
-        flex: 0 0 100%;
-        display:flex;
-        justify-content: flex-start;
-        margin-left: 0px;
-        margin-top: 0px;
-        padding-top: 0px;
-        margin-bottom: 0px;
+    
+  .nav {
+        margin-top: auto; /* 상단 요소들을 피해서 아래로 밀기 */
+        width: 100%;
+        padding-top: 50px; /* 로고 라인과의 간격 */
+        padding-right: 200px;
     }
-    .navigation a{
-        font-size: 12px;
+
+    .nav .depth1 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* 왼쪽 정렬 */
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
-    .nav-link{
-        margin-right: 10px;
+
+    .depth1-item {
+        margin-right: 15px; /* 메뉴 사이 간격 */
+    }
+
+    .depth1-title {
+        font-size: 13px; /* 좁은 화면 대비 폰트 축소 */
+        color: #333;
+        font-weight: 500;
         white-space: nowrap;
-        font-size: 14px;
     }
+
+    /* 4. 세로 구분선 (|) */
+    .nav-divider {
+        display: inline-block;
+        width: 1px;
+        height: 12px;
+        background-color: #ddd;
+        margin: 0 15px 0 5px; /* From MUJI 그룹 뒤의 여백 */
+    }
+
+    /* 5. 장바구니 배지 디테일 */
     .cart-count {
+        position: absolute;
         top: 2px;
-        left: 5px;
+        right: 8px;
         font-size: 9px;
-        font-weight: 400;
-}
+        color: #3c3c43;
+        font-weight: bold;
+    }
 }
 @media (max-width: 599px) {
     .header {

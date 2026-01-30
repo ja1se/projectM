@@ -41,6 +41,8 @@
     <!-- cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="popup-container" id="popupContainer">
@@ -73,7 +75,189 @@
       <div class="logo">
         <img src="images/mujilogo.png" alt="MUJI 로고" />
       </div>
-      <nav class="navigation">
+
+      <!-- GNB depth3 구조 -->
+       <div class="wrap">
+        <nav class="nav">
+          <ul class="depth1">
+            <li class="depth1-item">
+              <a href="#" class="depth1-title">BEST</a>
+            </li>
+            <li class="depth1-item">
+              <a href="#" class="depth1-title">의복</a>
+              <div class="mega">
+                <div class="inner">
+                  <ul class="depth2">
+                    <li class="depth2-item">
+                      <a href="#">남성</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">아우터</a></li>
+                        <li class="depth3-item"><a href="#">티셔츠</a></li>
+                        <li class="depth3-item"><a href="#">니트</a></li>
+                        <li class="depth3-item"><a href="#">팬츠</a></li>
+                        <li class="depth3-item"><a href="#">셔츠</a></li>
+                        <li class="depth3-item"><a href="#">홈웨어</a></li>
+                        <li class="depth3-item"><a href="#">이너웨어</a></li>
+                      </ul>
+                    </li>
+                    <li class="depth2-item">
+                      <a href="#">여성</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">아우터</a></li>
+                        <li class="depth3-item"><a href="#">티셔츠</a></li>
+                        <li class="depth3-item"><a href="#">니트</a></li>
+                        <li class="depth3-item"><a href="#">팬츠</a></li>
+                        <li class="depth3-item"><a href="#">셔츠</a></li>
+                        <li class="depth3-item"><a href="#">홈웨어</a></li>
+                        <li class="depth3-item"><a href="#">이너웨어</a></li>
+                      </ul>
+                    </li>
+                    <li class="depth2-item">
+                      <a href="#">아동</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">키즈</a></li>
+                        <li class="depth3-item"><a href="#">베이비</a></li>
+                      </ul>
+                    </li>
+                    <li class="depth2-item">
+                      <a href="#">패션잡화</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">모자</a></li>
+                        <li class="depth3-item"><a href="#">양말/스타킹</a></li>
+                        <li class="depth3-item"><a href="#">장갑/머플러</a></li>
+                        <li class="depth3-item"><a href="#">신발</a></li>
+                        <li class="depth3-item"><a href="#">가방</a></li>
+                        <li class="depth3-item"><a href="#">여행용품</a></li>
+                        <li class="depth3-item"><a href="#">기타</a></li>
+                        <li class="depth3-item"><a href="#">LABO</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="depth1-item">
+              <a href="#" class="depth1-title">생활</a>
+              <div class="mega">
+                <div class="inner">
+                  <ul class="depth2">
+                    <li class="depth2-item">
+                      <a href="#">남성</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">아우터</a></li>
+                        <li class="depth3-item"><a href="#">티셔츠</a></li>
+                        <li class="depth3-item"><a href="#">니트</a></li>
+                        <li class="depth3-item"><a href="#">팬츠</a></li>
+                        <li class="depth3-item"><a href="#">셔츠</a></li>
+                        <li class="depth3-item"><a href="#">홈웨어</a></li>
+                        <li class="depth3-item"><a href="#">이너웨어</a></li>
+                      </ul>
+                    </li>
+                    <li class="depth2-item">
+                      <a href="#">여성</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">아우터</a></li>
+                        <li class="depth3-item"><a href="#">티셔츠</a></li>
+                        <li class="depth3-item"><a href="#">니트</a></li>
+                        <li class="depth3-item"><a href="#">팬츠</a></li>
+                        <li class="depth3-item"><a href="#">셔츠</a></li>
+                        <li class="depth3-item"><a href="#">홈웨어</a></li>
+                        <li class="depth3-item"><a href="#">이너웨어</a></li>
+                      </ul>
+                    </li>
+                    <li class="depth2-item">
+                      <a href="#">아동</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">키즈</a></li>
+                        <li class="depth3-item"><a href="#">베이비</a></li>
+                      </ul>
+                    </li>
+                    <li class="depth2-item">
+                      <a href="#">패션잡화</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">모자</a></li>
+                        <li class="depth3-item"><a href="#">양말/스타킹</a></li>
+                        <li class="depth3-item"><a href="#">장갑/머플러</a></li>
+                        <li class="depth3-item"><a href="#">신발</a></li>
+                        <li class="depth3-item"><a href="#">가방</a></li>
+                        <li class="depth3-item"><a href="#">여행용품</a></li>
+                        <li class="depth3-item"><a href="#">기타</a></li>
+                        <li class="depth3-item"><a href="#">LABO</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="depth1-item">
+              <a href="#" class="depth1-title">식품</a>
+              <div class="mega">
+                <div class="inner">
+                  <ul class="depth2">
+                    <li class="depth2-item">
+                      <a href="#">남성</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">아우터</a></li>
+                        <li class="depth3-item"><a href="#">티셔츠</a></li>
+                        <li class="depth3-item"><a href="#">니트</a></li>
+                        <li class="depth3-item"><a href="#">팬츠</a></li>
+                        <li class="depth3-item"><a href="#">셔츠</a></li>
+                        <li class="depth3-item"><a href="#">홈웨어</a></li>
+                        <li class="depth3-item"><a href="#">이너웨어</a></li>
+                      </ul>
+                    </li>
+                    <li class="depth2-item">
+                      <a href="#">여성</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">아우터</a></li>
+                        <li class="depth3-item"><a href="#">티셔츠</a></li>
+                        <li class="depth3-item"><a href="#">니트</a></li>
+                        <li class="depth3-item"><a href="#">팬츠</a></li>
+                        <li class="depth3-item"><a href="#">셔츠</a></li>
+                        <li class="depth3-item"><a href="#">홈웨어</a></li>
+                        <li class="depth3-item"><a href="#">이너웨어</a></li>
+                      </ul>
+                    </li>
+                    <li class="depth2-item">
+                      <a href="#">아동</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">키즈</a></li>
+                        <li class="depth3-item"><a href="#">베이비</a></li>
+                      </ul>
+                    </li>
+                    <li class="depth2-item">
+                      <a href="#">패션잡화</a>
+                      <ul class="depth3">
+                        <li class="depth3-item"><a href="#">모자</a></li>
+                        <li class="depth3-item"><a href="#">양말/스타킹</a></li>
+                        <li class="depth3-item"><a href="#">장갑/머플러</a></li>
+                        <li class="depth3-item"><a href="#">신발</a></li>
+                        <li class="depth3-item"><a href="#">가방</a></li>
+                        <li class="depth3-item"><a href="#">여행용품</a></li>
+                        <li class="depth3-item"><a href="#">기타</a></li>
+                        <li class="depth3-item"><a href="#">LABO</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="depth1-item">
+              <a href="#" class="depth1-title">MUJI GIFT CARD</a>
+            </li>
+            <span class="nav-divider"></span>
+            <li class="depth1-item">
+              <a href="#" class="depth1-title">MUJI Support</a>
+            </li>
+            <li class="depth1-item">
+              <a href="#" class="depth1-title">From MUJI</a>
+            </li>
+          </ul>
+        </nav>
+       </div>
+
+
+      <!-- <nav class="navigation">
         <a href="#" class="nav-link">BEST</a>
         <a href="#" class="nav-link">의복</a>
         <a href="#" class="nav-link">생활</a>
@@ -82,7 +266,10 @@
         <span class="nav-divider"></span>
         <a href="#" class="nav-link">MUJI Support</a>
         <a href="#" class="nav-link">From MUJI</a>
-      </nav>
+      </nav> -->
+
+
+
       <div class="header-actions">
         <button class="icon-button" aria-label="검색">
           <img src="images/icon-search.png" alt="" />
@@ -99,37 +286,23 @@
     <!-- Main Content -->
     <main class="main">
       <!-- Hero Slide -->
-      <section class="section main-slide">
-        <div class="slide-container">
-          <div class="slide">
-            <img src="images/newhabbit.jpg" alt="슬라이드1" />
-            <div class="slide-content">
-              <h1></h1>
-              <p></p>
+      <section class="section swiper">
+        <div class="swiper swiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/newhabbit.jpg" alt="슬라이드1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/bed.jpg" alt="슬라이드2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/warminner.jpg" alt="슬라이드3" />
             </div>
           </div>
-          <div class="slide active">
-            <img src="images/bed.jpg" alt="슬라이드2" />
-            <div class="slide-content">
-              <h1>온기를 담은 공간</h1>
-              <p>소재의 따뜻함을 살린 겨울 침구</p>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="images/warminner.jpg" alt="슬라이드3" />
-            <div class="slide-content">
-              <h1>따뜻한 면 이너웨어</h1>
-              <p>면 본연의 힘을 살려 자연스럽고 부드러운 촉감의 따뜻한 면</p>
-            </div>
-          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
         </div>
-        <button class="slide-button prev" aria-label="이전">
-          <img src="images/icon-left.png" alt="" />
-        </button>
-        <button class="slide-button next" aria-label="다음">
-          <img src="images/icon-right.png" alt="" />
-        </button>
-        <div class="slide-indicator">1 / 3</div>
       </section>
       <!-- Category Icons -->
       <section class="section categories">
@@ -810,6 +983,28 @@
       }
       popup.style.display = 'none';
   });
+  // swiper
+  const swiper1 = new Swiper('.swiper1', {
+    autoplay: {
+    delay: 2000,
+    pauseOnMouseEnter:true,
+  },
+  // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
     </script>
   </body>
 </html>
