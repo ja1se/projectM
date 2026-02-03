@@ -92,32 +92,35 @@ a {
 /* Header */
 .header {
   background-color: white;
-  height: 89px;
+  min-height: 89px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 0 80px;
+  padding: 15px 80px;
   position: sticky;
   top: 0;
   z-index: 100;
 }
-
-.logo {
-  width: 150px;
-  margin-right: 20px;
-}
-
-.logo img {
-  width: 100%;
-  background-size: cover;
-}
-
-.header-actions {
+.logo-actions {
   display: flex;
   align-items: center;
-  gap: 24px;
-  margin-left: auto;
+  justify-content: space-between;
+  width: 100%;
 }
-
+.logo {
+  width: 150px;
+  margin-right: auto;
+  padding-top: 20px;
+}
+.header-actions {
+  display: flex;
+  position: absolute;
+  bottom:40px;
+  right:80px;
+  align-items: center;
+  margin-left: auto;
+  gap: 24px;
+}
 .icon-button {
   width: 24px;
   height: 24px;
@@ -144,11 +147,16 @@ a {
 }
 
 .nav {
+  position: sticky;
+  width: 100%;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   gap: 20px;
   flex: 1;
   white-space: nowrap;
+  margin-top: -45px;
+  margin-left: -150px;
 }
 .nav .depth1 {
   display: flex;
@@ -171,11 +179,18 @@ a {
 }
 
 .nav .nav-divider {
-  display: inline-block;
+  position: relative;
+}
+.nav .nav-divider:after {
+  position: absolute;
+  content: "";
+  right: 80px;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
   width: 1px;
   height: 14px;
-  background-color: #d8d8d9;
-  margin: 0 10px;
+  background-color: #fa4545;
 }
 
 /* GNB ul,li 불렛 제거 */
@@ -302,7 +317,7 @@ a {
 .section {
   margin-bottom: 60px;
 }
-.section.collections{
+.section.collections {
   margin-top: 100px;
 }
 
@@ -314,9 +329,9 @@ a {
 /* Swiper */
 /* 슬라이더 컨테이너 크기 설정 */
 .section.swiper-container {
-    width: 100%;
-    overflow: hidden; /* 브라우저 밖으로 나가는 것만 가림 */
-    position: absolute;
+  width: 100%;
+  overflow: hidden; /* 브라우저 밖으로 나가는 것만 가림 */
+  position: absolute;
 }
 .swiper {
   width: 100%;
@@ -324,9 +339,9 @@ a {
   position: relative;
 }
 .swiper.swiper1 {
-    width: 100%;
-    height: 500px;
-    overflow: visible;
+  width: 100%;
+  height: 500px;
+  overflow: visible;
 }
 /* 슬라이드 스타일 */
 .swiper-slide {
@@ -342,11 +357,11 @@ a {
 }
 .slide-content {
   position: absolute;
-  top: 50%;         /* 세로 중앙 */
-  left: 50px;       /* 왼쪽에서 50px 띄움 (무인양품 스타일) */
+  top: 50%; /* 세로 중앙 */
+  left: 50px; /* 왼쪽에서 50px 띄움 (무인양품 스타일) */
   transform: translateY(-50%); /* 세로 정중앙 정렬 공식 */
-  color: #fff;      /* 글자색 화이트 */
-  text-shadow: 0 2px 10px rgba(0,0,0,0.3); /* 이미지 위에서 잘 보이게 그림자 추가 */
+  color: #fff; /* 글자색 화이트 */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* 이미지 위에서 잘 보이게 그림자 추가 */
   z-index: 10;
 }
 
@@ -385,38 +400,38 @@ a {
 }
 
 .swiper-pagination-fraction {
-    /* 기본 위치 초기화 */
-    left: 49% !important;
-    bottom: 30px !important; /* 하단에서 30px 띄움 */
-    transform: translateX(-50%); /* 정확히 가로 중앙으로 이동 */
-    
-    /* 디자인 스타일 */
-    width: auto !important; /* 글자 길이에 딱 맞게 조절 */
-    min-width: 90px;
-    padding: 8px 20px;
-    background-color: rgba(0, 0, 0, 0.3); /* 반투명 배경 */
-    border-radius: 25px;
-    font-size: 13px;
-    font-weight: 500;
-    z-index: 100;
-    
-    /* 숫자 간격 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
+  /* 기본 위치 초기화 */
+  left: 49% !important;
+  bottom: 30px !important; /* 하단에서 30px 띄움 */
+  transform: translateX(-50%); /* 정확히 가로 중앙으로 이동 */
+
+  /* 디자인 스타일 */
+  width: auto !important; /* 글자 길이에 딱 맞게 조절 */
+  min-width: 90px;
+  padding: 8px 20px;
+  background-color: rgba(0, 0, 0, 0.3); /* 반투명 배경 */
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 100;
+
+  /* 숫자 간격 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 }
-.divider{
-    color: #fff;
+.divider {
+  color: #fff;
 }
 
 /* 현재 번호 강조 */
-.swiper-pagination-current{
-    color: #fff;
+.swiper-pagination-current {
+  color: #fff;
 }
 .swiper-pagination-total {
-    font-weight: bold;
-    color: #fff;
+  font-weight: bold;
+  color: #fff;
 }
 
 /* Categories */
@@ -472,11 +487,12 @@ a {
   font-weight: 500;
   white-space: nowrap;
 }
-.swiper-button-next, .swiper-button-prev {
-    color: #1d1d1f;
-    transform: scale(0.7);
+.swiper-button-next,
+.swiper-button-prev {
+  color: #1d1d1f;
+  transform: scale(0.7);
 }
-/* 화살표 커스텀 (무인양품 스타일로 작게) */
+/* swiper 화살표 커스텀 */
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 18px !important;
@@ -488,7 +504,7 @@ a {
   padding: 0 80px;
 }
 
-.new-products h2 {
+.new-products h3 {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 32px;
@@ -616,6 +632,13 @@ a {
 
 .article .rating span:last-of-type {
   color: #9d9da0;
+}
+.container h4{
+  font-size: 14px;
+  font-weight: 500;
+}
+.container.price{
+  font-weight: 600;
 }
 
 /* Collections1 */
@@ -986,6 +1009,10 @@ a {
   margin-bottom: 1px;
 }
 
+.bottom-nav {
+  display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .header {
@@ -1032,72 +1059,114 @@ a {
     font-size: 36px;
     width: 350px;
   }
+  .more-link {
+    width: 100%;
+  }
 }
+
 @media (min-width: 600px) and (max-width: 1039px) {
   .header {
-    /* 1. 2단 구조를 위한 설정 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 상단과 하단 사이 간격 최대로 */
 
-    height: 95px; /* 요청하신 고정 높이 */
-    padding: 12px 24px; /* 위아래 내부 여백 */
-    box-sizing: border-box;
-    background-color: #fff;
-  }
-  .logo {
-    position: absolute;
-    top: 15px;
-    left: 24px;
-    margin: 0;
-  }
+    .logo-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0px 0px;
+      box-sizing: border-box;
+      position: relative;
+      transform: translateY(20px);
+    }
+    .logo,
+    .header-actions {
+      position: static !important;
+      margin: 0;
+      transform: none;
+    }
+    .logo {
+      width: 110px;
+      display: flex;
+      align-items: center;
+    }
+    .header-actions {
+      display: flex;
+      gap: 15px;
+    }
+    .nav .depth1 {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 2px;
+    }
 
-  .header-actions {
-    position: absolute;
-    top: 15px;
-    right: 24px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
+    .depth1-item:nth-child(7) {
+      order: 1;
+    }
+    .depth1-item:nth-child(6) {
+      order: 2;
+    }
+    .nav-divider {
+      order: 3;
+    }
+    .depth1-item:nth-child(1) {
+      order: 4;
+    }
+    .depth1-item:nth-child(2) {
+      order: 5;
+    }
+    .depth1-item:nth-child(3) {
+      order: 6;
+    }
+    .depth1-item:nth-child(4) {
+      order: 7;
+    }
+    .depth1-item:nth-child(5) {
+      order: 8;
+    }
+    .nav {
+      position: fixed;
+      top: 55px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 0 18px;
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+    .nav .depth1-title {
+      font-size: 14px;
+    }
+    .nav .nav-divider {
+      position: relative;
+    }
+    .nav .nav-divider:after {
+      position: absolute;
+      content: "";
+      right: 80px;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      display: block;
+      width: 1px;
+      height: 14px;
+      background-color: #fa4545;
+    }
+    .mega {
+      display: none !important; /* 어떤 상황에서도 나타나지 않게 함 */
+    }
 
-  .nav {
-    margin-top: auto; /* 상단 요소들을 피해서 아래로 밀기 */
-    width: 100%;
-    padding-top: 50px; /* 로고 라인과의 간격 */
-    padding-right: 200px;
   }
-
-  .nav .depth1 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* 왼쪽 정렬 */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .depth1-item {
-    margin-right: 15px; /* 메뉴 사이 간격 */
-  }
-
-  .depth1-title {
-    font-size: 13px; /* 좁은 화면 대비 폰트 축소 */
-    color: #333;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-
-  /* 4. 세로 구분선 (|) */
-  .nav-divider {
-    display: inline-block;
-    width: 1px;
-    height: 12px;
-    background-color: #ddd;
-    margin: 0 15px 0 5px; /* From MUJI 그룹 뒤의 여백 */
-  }
-
-  /* 5. 장바구니 배지 디테일 */
+  /* 장바구니 배지 디테일 */
   .cart-count {
     position: absolute;
     top: 2px;
@@ -1106,12 +1175,151 @@ a {
     color: #3c3c43;
     font-weight: bold;
   }
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+  }
+  .nav-item {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+  }
+
+  /* footer========================================== */
+  .footer {
+    padding: 30px 20px 80px;
+    text-align: left;
+  }
+
+  /* 1. 최상단 메뉴 가로 나열 */
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 15px;
+  }
+  .footer-nav a {
+    font-size: 11px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  /* 2. 컬럼 세로 배치 */
+  .footer-content {
+    display: block;
+  }
+
+  /* 3. 로고 및 상단 링크 */
+  .footer-column.left .logo img {
+    width: 90px;
+    margin-bottom: 15px;
+  }
+  .footer-links {
+    margin-bottom: 30px;
+  }
+  .footer-links a {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+
+  /* 4. 아코디언 트리거 스타일 (가상 요소 활용) */
+  .footer-column.center {
+    border-top: 1px solid #f2f2f2;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /* 클릭 전 제목 */
+  .footer-column.center::before {
+    content: "무인양품(주) 사업자정보 ⌵";
+    font-size: 12px;
+    color: #999;
+  }
+
+  /* 5. 숨길 내용들 (center의 정보 + right 전체) */
+  .company-info,
+  .social-links {
+    display: none;
+    text-align: left;
+  }
+  .footer-column.right {
+    display: none;
+  }
+
+  /* 6. 클릭 시(active 클래스) 보여주기 */
+  .footer-column.center.active::before {
+    content: "무인양품(주) 사업자정보 ⌃";
+  }
+
+  .footer-column.center.active .company-info,
+  .footer-column.center.active .social-links,
+  .footer-column.center.active ~ .footer-column.right {
+    display: block;
+  }
+
+  /* 상세 정보 글씨 스타일 */
+  .company-info p,
+  .customer-service p {
+    font-size: 11px;
+    color: #999;
+    line-height: 1.6;
+    margin: 3px 0;
+  }
+
+  /* SNS 아이콘 가로 나열 */
+  .social-links {
+    display: flex !important;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  .social-links i {
+    font-size: 18px;
+    color: #333;
+  }
+
+  /* 글로벌 사이트 버튼 (이미지처럼 꽉 차게) */
+  .global-site-btn {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    padding: 12px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+  }
 }
 @media (max-width: 599px) {
   .header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+  }
+  .logo-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    position: relative;
+    transform: translateY(20px);
   }
   .logo,
   .header-actions {
@@ -1263,6 +1471,26 @@ a {
   .more-link {
     position: static;
     margin-top: 20px;
+  }
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+  }
+  .nav-item {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
   }
 }
 
