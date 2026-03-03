@@ -1,1255 +1,1302 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPGK07LGM1"></script>
-    <script>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPGK07LGM1"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-MPGK07LGM1');
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>무인양품 포트폴리오</title>
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
-    <link rel="manifest" href="favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
-    <!-- og 태그 -->
-    <meta property="og:title" content="muji" />
-    <meta property="og:site_name" content="mujikorea" />
-    <meta property="og:url" content="https://ja1se.github.io/projectM/" />
-    <meta property="og:description" content="The aesthetics of minimalism alone are enough." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://github.com/ja1se/projectM/blob/main/images/og.png?raw=true" />
-    <!-- cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <div class="popup-container" id="popupContainer">
-      <div class="popup">
-        <div class="top-controls">
-            <button class="control btn min-btn"><i class="fa-solid fa-minus"></i></button>
-            <button class="control btn close-x-btn"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="status-icon"><img src="images/lighton.png" alt=""></div>
-        <h1 class="status-title">잠깐만요!✋🏻</h1>
-        <p>이 프로젝트는 구직용 포트폴리오입니다. 무인양품과 무관함을 알려드립니다.</p>
-        <button class="close" id="btn">OK</button>
-        <div class="dont-show-again">
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>무인양품 포트폴리오</title>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+  <link rel="manifest" href="favicon/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- og 태그 -->
+  <meta property="og:title" content="muji" />
+  <meta property="og:site_name" content="mujikorea" />
+  <meta property="og:url" content="https://ja1se.github.io/projectM/" />
+  <meta property="og:description" content="The aesthetics of minimalism alone are enough." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://github.com/ja1se/projectM/blob/main/images/og.png?raw=true" />
+  <!-- cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="popup-container" id="popupContainer">
+    <div class="popup">
+      <div class="top-controls">
+        <button class="control btn min-btn"><i class="fa-solid fa-minus"></i></button>
+        <button class="control btn close-x-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="status-icon"><img src="images/lighton.png" alt=""></div>
+      <h1 class="status-title">잠깐만요!✋🏻</h1>
+      <p>이 프로젝트는 구직용 포트폴리오입니다. 무인양품과 무관함을 알려드립니다.</p>
+      <button class="close" id="btn">OK</button>
+      <div class="dont-show-again">
         <input type="checkbox" id="todayCheck">
         <label for="todayCheck">오늘 하루 보지 않기</label>
       </div>
-      </div>
     </div>
-    <!-- App Download Banner -->
-    <div class="app-banner">
-      <div class="app-banner-content">
-        <span class="app-banner-text"> <strong>MUJI APP</strong> 다운받고, 다양한 혜택을 경험해보세요. </span>
-      </div>
-      <button class="close-button" aria-label="닫기">
-        <i class="fa-solid fa-xmark" style="color: #fff;"></i>
+  </div>
+  <!-- App Download Banner -->
+  <div class="app-banner">
+    <div class="app-banner-content">
+      <span class="app-banner-text"> <strong>MUJI APP</strong> 다운받고, 다양한 혜택을 경험해보세요. </span>
+    </div>
+    <button class="close-button" aria-label="닫기">
+      <i class="fa-solid fa-xmark" style="color: #fff;"></i>
+    </button>
+  </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/mujilogo.png" alt="MUJI 로고" />
+    </div>
+    <div class="header-actions">
+      <button class="icon-button" aria-label="검색">
+        <img src="images/icon-search.svg" alt="" />
+      </button>
+      <button class="icon-button" aria-label="마이페이지">
+        <img src="images/icon-mypage.svg" alt="" />
+      </button>
+      <button class="icon-button cart" aria-label="장바구니">
+        <img src="images/icon-cart.svg" alt="" />
+        <span class="cart-count">0</span>
       </button>
     </div>
-    <!-- Header -->
-    <header class="header">
-      <div class="logo">
-        <img src="images/mujilogo.png" alt="MUJI 로고" />
-      </div>
-      <div class="header-actions">
-        <button class="icon-button" aria-label="검색">
-          <img src="images/icon-search.png" alt="" />
-        </button>
-        <button class="icon-button" aria-label="마이페이지">
-          <img src="images/icon-user.png" alt="" />
-        </button>
-        <button class="icon-button cart" aria-label="장바구니">
-          <img src="images/icon-cart.png" alt="" />
-          <span class="cart-count">0</span>
-        </button>
-      </div>
-      <!-- GNB depth3 구조 -->
-       <div class="wrap">
-        <nav class="nav">
-          <ul class="depth1">
-            <li class="depth1-item">
-              <a href="#" class="depth1-title">BEST</a>
-            </li>
-            <li class="depth1-item">
-              <a href="#" class="depth1-title">의복</a>
-              <div class="mega">
-                <div class="inner">
-                  <ul class="depth2">
-                    <li class="depth2-item active">
-                      <a href="#">남성</a>
-                      <ul class="depth3">
-                        <li class="depth3-item"><a href="#">아우터</a></li>
-                        <li class="depth3-item"><a href="#">티셔츠</a></li>
-                        <li class="depth3-item"><a href="#">니트</a></li>
-                        <li class="depth3-item"><a href="#">팬츠</a></li>
-                        <li class="depth3-item"><a href="#">셔츠</a></li>
-                        <li class="depth3-item"><a href="#">홈웨어</a></li>
-                        <li class="depth3-item"><a href="#">이너웨어</a></li>
-                      </ul>
-                    </li>
-                    <li class="depth2-item">
-                      <a href="#">여성</a>
-                      <ul class="depth3">
-                        <li class="depth3-item"><a href="#">아우터</a></li>
-                        <li class="depth3-item"><a href="#">티셔츠</a></li>
-                        <li class="depth3-item"><a href="#">니트</a></li>
-                        <li class="depth3-item"><a href="#">팬츠</a></li>
-                        <li class="depth3-item"><a href="#">셔츠</a></li>
-                        <li class="depth3-item"><a href="#">홈웨어</a></li>
-                        <li class="depth3-item"><a href="#">이너웨어</a></li>
-                      </ul>
-                    </li>
-                    <li class="depth2-item">
-                      <a href="#">아동</a>
-                      <ul class="depth3">
-                        <li class="depth3-item"><a href="#">키즈</a></li>
-                        <li class="depth3-item"><a href="#">베이비</a></li>
-                      </ul>
-                    </li>
-                    <li class="depth2-item">
-                      <a href="#">패션잡화</a>
-                      <ul class="depth3">
-                        <li class="depth3-item"><a href="#">모자</a></li>
-                        <li class="depth3-item"><a href="#">양말/스타킹</a></li>
-                        <li class="depth3-item"><a href="#">장갑/머플러</a></li>
-                        <li class="depth3-item"><a href="#">신발</a></li>
-                        <li class="depth3-item"><a href="#">가방</a></li>
-                        <li class="depth3-item"><a href="#">여행용품</a></li>
-                        <li class="depth3-item"><a href="#">기타</a></li>
-                        <li class="depth3-item"><a href="#">LABO</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
+    <!-- GNB depth3 구조 -->
+    <div class="warp">
+      <nav class="nav">
+        <ul class="depth1">
+          <li class="depth1-item">
+            <a href="#" class="depth1-title">BEST</a>
+          </li>
+          <li class="depth1-item">
+            <a href="#" class="depth1-title">의복</a>
+            <div class="mega">
+              <div class="inner">
+                <ul class="depth2">
+                  <li class="depth2-item active">
+                    <a href="#">남성</a>
+                    <ul class="depth3">
+                      <li class="depth3-item"><a href="#">아우터</a></li>
+                      <li class="depth3-item"><a href="#">티셔츠</a></li>
+                      <li class="depth3-item"><a href="#">니트</a></li>
+                      <li class="depth3-item"><a href="#">팬츠</a></li>
+                      <li class="depth3-item"><a href="#">셔츠</a></li>
+                      <li class="depth3-item"><a href="#">홈웨어</a></li>
+                      <li class="depth3-item"><a href="#">이너웨어</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth2-item">
+                    <a href="#">여성</a>
+                    <ul class="depth3">
+                      <li class="depth3-item"><a href="#">아우터</a></li>
+                      <li class="depth3-item"><a href="#">티셔츠</a></li>
+                      <li class="depth3-item"><a href="#">니트</a></li>
+                      <li class="depth3-item"><a href="#">팬츠</a></li>
+                      <li class="depth3-item"><a href="#">셔츠</a></li>
+                      <li class="depth3-item"><a href="#">홈웨어</a></li>
+                      <li class="depth3-item"><a href="#">이너웨어</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth2-item">
+                    <a href="#">아동</a>
+                    <ul class="depth3">
+                      <li class="depth3-item"><a href="#">키즈</a></li>
+                      <li class="depth3-item"><a href="#">베이비</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth2-item">
+                    <a href="#">패션잡화</a>
+                    <ul class="depth3">
+                      <li class="depth3-item"><a href="#">모자</a></li>
+                      <li class="depth3-item"><a href="#">양말/스타킹</a></li>
+                      <li class="depth3-item"><a href="#">장갑/머플러</a></li>
+                      <li class="depth3-item"><a href="#">신발</a></li>
+                      <li class="depth3-item"><a href="#">가방</a></li>
+                      <li class="depth3-item"><a href="#">여행용품</a></li>
+                      <li class="depth3-item"><a href="#">기타</a></li>
+                      <li class="depth3-item"><a href="#">LABO</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
-            </li>
-            <li class="depth1-item">
-              <a href="#" class="depth1-title">생활</a>
-              <div class="mega">
-                <div class="inner">
-                  <ul class="depth2">
-                    <li class="depth2-item active">
-                      <a href="#">주방용품</a>
-                      <ul class="depth3">
-                        <li class="depth3-item"><a href="#">주방잡화</a></li>
-                        <li class="depth3-item"><a href="#">주방수납/정리</a></li>
-                        <li class="depth3-item"><a href="#">식기</a></li>
-                        <li class="depth3-item"><a href="#">잔/컵/물병</a></li>
-                        <li class="depth3-item"><a href="#">보관/밀폐용기</a></li>
-                        <li class="depth3-item"><a href="#">조리도구</a></li>
-                        <li class="depth3-item"><a href="#">커피/티용품</a></li>
-                      </ul>
-                    </li>
-                    <li class="depth2-item">
-                      <a href="#">패브릭</a>
-                      <ul class="depth3">
-                        <li class="depth3-item"><a href="#">침구</a></li>
-                        <li class="depth3-item"><a href="#">리빙 패브릭</a></li>
-                      </ul>
-                    </li>
-                    <li class="depth2-item">
-                      <a href="#">수납/정리</a>
-                      <ul class="depth3">
-                        <li class="depth3-item"><a href="#">리빙박스</a></li>
-                        <li class="depth3-item"><a href="#">소품수납</a></li>
-                        <li class="depth3-item"><a href="#">모듈수납</a></li>
-                      </ul>
-                    </li>
-                    <li class="depth2-item">
-                      <a href="#">가구</a>
-                      <ul class="depth3">
-                        <li class="depth3-item"><a href="#">침실가구</a></li>
-                        <li class="depth3-item"><a href="#">수납가구</a></li>
-                        <li class="depth3-item"><a href="#">다이닝가구</a></li>
-                        <li class="depth3-item"><a href="#">서재가구</a></li>
-                        <li class="depth3-item"><a href="#">인테리어가구</a></li>
-                        <li class="depth3-item"><a href="#">부속</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+          </li>
+          <li class="depth1-item">
+            <a href="#" class="depth1-title">생활</a>
+            <div class="mega">
+              <div class="inner">
+                <ul class="depth2">
+                  <li class="depth2-item active">
+                    <a href="#">주방용품</a>
+                    <ul class="depth3">
+                      <li class="depth3-item"><a href="#">주방잡화</a></li>
+                      <li class="depth3-item"><a href="#">주방수납/정리</a></li>
+                      <li class="depth3-item"><a href="#">식기</a></li>
+                      <li class="depth3-item"><a href="#">잔/컵/물병</a></li>
+                      <li class="depth3-item"><a href="#">보관/밀폐용기</a></li>
+                      <li class="depth3-item"><a href="#">조리도구</a></li>
+                      <li class="depth3-item"><a href="#">커피/티용품</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth2-item">
+                    <a href="#">패브릭</a>
+                    <ul class="depth3">
+                      <li class="depth3-item"><a href="#">침구</a></li>
+                      <li class="depth3-item"><a href="#">리빙 패브릭</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth2-item">
+                    <a href="#">수납/정리</a>
+                    <ul class="depth3">
+                      <li class="depth3-item"><a href="#">리빙박스</a></li>
+                      <li class="depth3-item"><a href="#">소품수납</a></li>
+                      <li class="depth3-item"><a href="#">모듈수납</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth2-item">
+                    <a href="#">가구</a>
+                    <ul class="depth3">
+                      <li class="depth3-item"><a href="#">침실가구</a></li>
+                      <li class="depth3-item"><a href="#">수납가구</a></li>
+                      <li class="depth3-item"><a href="#">다이닝가구</a></li>
+                      <li class="depth3-item"><a href="#">서재가구</a></li>
+                      <li class="depth3-item"><a href="#">인테리어가구</a></li>
+                      <li class="depth3-item"><a href="#">부속</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
-            </li>
-            <li class="depth1-item">
-              <a href="#" class="depth1-title">식품</a>
-              <div class="mega">
-                <div class="inner">
-                  <ul class="depth2">
-                    <li class="depth2-item active">
-                      <a href="#">간편조리</a>
-                      <ul class="depth3">
-                        <li class="depth3-item"><a href="#">밀키트</a></li>
-                        <li class="depth3-item"><a href="#">국</a></li>
-                        <li class="depth3-item"><a href="#">반찬</a></li>
-                        <li class="depth3-item"><a href="#">스프/카레/소스</a></li>
-                      </ul>
-                    </li>
-                    <li class="depth2-item">
-                      <a href="#">스낵</a>
-                      <ul class="depth3">
-                        <li class="depth3-item"><a href="#">과자</a></li>
-                        <li class="depth3-item"><a href="#">초콜릿</a></li>
-                        <li class="depth3-item"><a href="#">캔디</a></li>
-                        <li class="depth3-item"><a href="#">음료</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+          </li>
+          <li class="depth1-item">
+            <a href="#" class="depth1-title">식품</a>
+            <div class="mega">
+              <div class="inner">
+                <ul class="depth2">
+                  <li class="depth2-item active">
+                    <a href="#">간편조리</a>
+                    <ul class="depth3">
+                      <li class="depth3-item"><a href="#">밀키트</a></li>
+                      <li class="depth3-item"><a href="#">국</a></li>
+                      <li class="depth3-item"><a href="#">반찬</a></li>
+                      <li class="depth3-item"><a href="#">스프/카레/소스</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth2-item">
+                    <a href="#">스낵</a>
+                    <ul class="depth3">
+                      <li class="depth3-item"><a href="#">과자</a></li>
+                      <li class="depth3-item"><a href="#">초콜릿</a></li>
+                      <li class="depth3-item"><a href="#">캔디</a></li>
+                      <li class="depth3-item"><a href="#">음료</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
-            </li>
-            <li class="depth1-item ">
-              <a href="#" class="depth1-title">MUJI GIFT CARD</a>
-            </li>
-            <li class="depth1-item nav-divider">
-              <a href="#" class="depth1-title">MUJI Support</a>
-            </li>
-            <li class="depth1-item">
-              <a href="#" class="depth1-title">From MUJI</a>
-            </li>
-          </ul>
-        </nav>
-       </div>
-    </header>
-    <!-- Main Content -->
-    <main class="main">
-      <!-- Hero Slide -->
-      <section class="section swiper">
-        <div class="swiper swiper1">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="images/newhabbit.jpg" alt="슬라이드1" />
-              <h2 class="slide-content">따뜻한 면 이너웨어</h2>
+            </div>
+          </li>
+          <li class="depth1-item ">
+            <a href="#" class="depth1-title">MUJI GIFT CARD</a>
+          </li>
+          <li class="depth1-item nav-divider">
+            <a href="#" class="depth1-title">MUJI Support</a>
+          </li>
+          <li class="depth1-item">
+            <a href="#" class="depth1-title">From MUJI</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Hero Slide -->
+    <section class="section swiper">
+      <div class="swiper swiper1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/newhabbit.jpg" alt="슬라이드1" />
+            <h2 class="slide-content">따뜻한 면 이너웨어</h2>
+            <p class="desc">면 본연의 힘을 살려 자연스럽고 부드러운 촉감의 따뜻한 면</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/bed.jpg" alt="슬라이드2" />
+            <h2 class="slide-content">따뜻한 면 이너웨어</h2>
+            <p class="desc">면 본연의 힘을 살려 자연스럽고 부드러운 촉감의 따뜻한 면</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/warminner.jpg" alt="슬라이드3" />
+            <div class="slide-content">
+              <h2 class="title">따뜻한 면 이너웨어</h2>
               <p class="desc">면 본연의 힘을 살려 자연스럽고 부드러운 촉감의 따뜻한 면</p>
             </div>
-            <div class="swiper-slide">
-              <img src="images/bed.jpg" alt="슬라이드2" />
-              <h2 class="slide-content">따뜻한 면 이너웨어</h2>
-              <p class="desc">면 본연의 힘을 살려 자연스럽고 부드러운 촉감의 따뜻한 면</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </section>
+    <!-- Category Icons -->
+    <section class="section categories">
+      <div class="swiper category-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/new.png" alt="신상품" />
+              </div>
+              <span>신상품</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/men.png" alt="남성" />
+              </div>
+              <span>남성</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/women.png" alt="여성" />
+              </div>
+              <span>여성</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/kid.png" alt="아동" />
+              </div>
+              <span>아동</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/carrier.png" alt="패션잡화" />
+              </div>
+              <span>패션잡화</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/clean.png" alt="생활용품" />
+              </div>
+              <span>생활용품</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/kitchen.png" alt="주방용품" />
+              </div>
+              <span>주방용품</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/fabric.png" alt="패브릭" />
+              </div>
+              <span>패브릭</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/box.png" alt="수납/정리" />
+              </div>
+              <span>수납/정리</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/interior.png" alt="가구" />
+              </div>
+              <span>가구</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/beauty.png" alt="뷰티" />
+              </div>
+              <span>뷰티</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/pet.png" alt="반려동물" />
+              </div>
+              <span>반려동물</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/pen.png" alt="문구" />
+              </div>
+              <span>문구</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/cooking.png" alt="간편조리" />
+              </div>
+              <span>간편조리</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/snack.png" alt="스낵" />
+              </div>
+              <span>스낵</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/watch.png" alt="가전/디지털" />
+              </div>
+              <span>가전/디지털</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/navercar.png" alt="N배송" />
+              </div>
+              <span>N배송</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/snshot.png" alt="SNS 인기템" />
+              </div>
+              <span>SNS 인기템</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/giftcard.png" alt="MUJI GIFT CARD" />
+              </div>
+              <span>MUJI GIFT CARD</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="category-link">
+              <div class="background">
+                <img src="images/remuji.png" alt="ReMUJI" />
+              </div>
+              <span>ReMUJI</span>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <!-- New Products Section -->
+    <section class="section new-products">
+      <h3>신상품이 입고 되었어요</h3>
+      <div class="filter-tabs">
+        <button class="tab active" data-tab="clothing">의복</button>
+        <button class="tab" data-tab="living">생활</button>
+        <button class="tab" data-tab="food">식품</button>
+      </div>
+      <div class="container-container">
+        <div id="clothing" class="product-grid tab-content active">
+          <article class="article">
+            <div class="background">
+              <img src="images/menpazama.png" alt="" />
             </div>
-            <div class="swiper-slide">
-              <img src="images/warminner.jpg" alt="슬라이드3" />
-              <div class="slide-content">
-                <h2 class="title">따뜻한 면 이너웨어</h2>
-                <p class="desc">면 본연의 힘을 살려 자연스럽고 부드러운 촉감의 따뜻한 면</p>
-              </div>
+            <div class="container">
+              <h4>남성 사이드 심리스 플란넬 긴소매 파자마</h4>
             </div>
-          </div>
+            <div class="price">69,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(40)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/mencolor.png" alt="" />
+            </div>
+            <div class="badge">SNS 인기</div>
+            <div class="container">
+              <h4>남성 정전기 발생이 적은 화이버 스탠드 칼라 파자마</h4>
+            </div>
+            <div class="price">69,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(24)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/mencepants.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>워싱 코튼 이지 팬츠</h4>
+            </div>
+            <div class="price">19,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.8</span>
+              <span>(98)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/menjacket.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>경량다운 포케터블 후드 재킷</h4>
+            </div>
+            <div class="price">179,000원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(10)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/mencjacket.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>남성 경량다운 스탠드칼라 재킷</h4>
+            </div>
+            <div class="price">179,000원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(119)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/skirt.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>워셔블 퀼팅 미니스커트</h4>
+            </div>
+            <div class="price">59,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(119)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/womenpajamas.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>여성 사이드 심리스 플란넬 긴소매 파자마</h4>
+            </div>
+            <div class="price">69,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(119)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/fullover.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>이중 편직 테리 풀오버</h4>
+            </div>
+            <div class="price">69,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(119)</span>
+            </div>
+          </article>
         </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-      </section>
-      <!-- Category Icons -->
-      <section class="section categories">
-        <div class="swiper category-swiper">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/new.png" alt="신상품" />
-                  </div>
-                  <span>신상품</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/men.png" alt="남성" />
-                  </div>
-                  <span>남성</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/women.png" alt="여성" />
-                  </div>
-                  <span>여성</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/kid.png" alt="아동" />
-                  </div>
-                  <span>아동</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/carrier.png" alt="패션잡화" />
-                  </div>
-                  <span>패션잡화</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/clean.png" alt="생활용품" />
-                  </div>
-                  <span>생활용품</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/kitchen.png" alt="주방용품" />
-                  </div>
-                  <span>주방용품</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/fabric.png" alt="패브릭" />
-                  </div>
-                  <span>패브릭</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/box.png" alt="수납/정리" />
-                  </div>
-                  <span>수납/정리</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/interior.png" alt="가구" />
-                  </div>
-                  <span>가구</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/beauty.png" alt="뷰티" />
-                  </div>
-                  <span>뷰티</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/pet.png" alt="반려동물" />
-                  </div>
-                  <span>반려동물</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/pen.png" alt="문구" />
-                  </div>
-                  <span>문구</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/cooking.png" alt="간편조리" />
-                  </div>
-                  <span>간편조리</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/snack.png" alt="스낵" />
-                  </div>
-                  <span>스낵</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/watch.png" alt="가전/디지털" />
-                  </div>
-                  <span>가전/디지털</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/navercar.png" alt="N배송" />
-                  </div>
-                  <span>N배송</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/snshot.png" alt="SNS 인기템" />
-                  </div>
-                  <span>SNS 인기템</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/giftcard.png" alt="MUJI GIFT CARD" />
-                  </div>
-                  <span>MUJI GIFT CARD</span>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="category-link">
-                  <div class="background">
-                    <img src="images/remuji.png" alt="ReMUJI" />
-                  </div>
-                  <span>ReMUJI</span>
-                </a>
-              </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </section>
-      <!-- New Products Section -->
-      <section class="section new-products">
-        <h3>신상품이 입고 되었어요</h3>
-        <div class="filter-tabs">
-          <button class="tab active" data-tab="clothing">의복</button>
-          <button class="tab" data-tab="living">생활</button>
-          <button class="tab" data-tab="food">식품</button>
-        </div>
-        <div class="container-container">
-          <div id="clothing" class="product-grid tab-content active">
-            <article class="article">
-              <div class="background">
-                <img src="images/menpazama.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>남성 사이드 심리스 플란넬 긴소매 파자마</h4>
-              </div>
-              <div class="price">69,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(40)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/mencolor.png" alt="" />
-              </div>
-              <div class="badge">SNS 인기</div>
-              <div class="container">
-                <h4>남성 정전기 발생이 적은 화이버 스탠드 칼라 파자마</h4>
-              </div>
-              <div class="price">69,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(24)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/mencepants.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>워싱 코튼 이지 팬츠</h4>
-              </div>
-              <div class="price">19,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.8</span>
-                <span>(98)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/menjacket.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>경량다운 포케터블 후드 재킷</h4>
-              </div>
-              <div class="price">179,000원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(10)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/mencjacket.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>남성 경량다운 스탠드칼라 재킷</h4>
-              </div>
-              <div class="price">179,000원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(119)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/skirt.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>워셔블 퀼팅 미니스커트</h4>
-              </div>
-              <div class="price">59,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(119)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/womenpajamas.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>여성 사이드 심리스 플란넬 긴소매 파자마</h4>
-              </div>
-              <div class="price">69,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(119)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/fullover.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>이중 편직 테리 풀오버</h4>
-              </div>
-              <div class="price">69,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(119)</span>
-              </div>
-            </article>
-          </div>
-          <div id="living" class="product-grid tab-content">
-            <article class="article">
-              <div class="background">
-                <img src="images/towel.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>폭신한 파일 핸드 타월(고리 타입) 그레이 34x35cm</h4>
-              </div>
-              <div class="price">3,500원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(40)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/watch.png" alt="" />
-              </div>
-              <div class="badge">SNS 인기</div>
-              <div class="container">
-                <h4>디지털 시계ㆍ마그넷 타입 · 그린</h4>
-              </div>
-              <div class="price">14,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(24)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/glasscup.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>유리 컵 · 약 350ml</h4>
-              </div>
-              <div class="price">2,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.8</span>
-                <span>(98)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/spoon.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>폴리프로필렌 밥이 붙지 않는 주걱</h4>
-              </div>
-              <div class="price">5,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(10)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/pen.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>컴팩트 겔 잉크 노크식 볼펜 블랙 0.5mm</h4>
-              </div>
-              <div class="price">2,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(119)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/carrier.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>높이 조절이 가능한 하드 캐리어 36L</h4>
-              </div>
-              <div class="price">249,000원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(119)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/fabric.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>진드기 방지 깃털 베개 화이트 43x63cm</h4>
-              </div>
-              <div class="price">14,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(119)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/pet.png" alt="" />
+        <div id="living" class="product-grid tab-content">
+          <article class="article">
+            <div class="background">
+              <img src="images/towel.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>폭신한 파일 핸드 타월(고리 타입) 그레이 34x35cm</h4>
+            </div>
+            <div class="price">3,500원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(40)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/watch.png" alt="" />
+            </div>
+            <div class="badge">SNS 인기</div>
+            <div class="container">
+              <h4>디지털 시계ㆍ마그넷 타입 · 그린</h4>
+            </div>
+            <div class="price">14,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(24)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/glasscup.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>유리 컵 · 약 350ml</h4>
+            </div>
+            <div class="price">2,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.8</span>
+              <span>(98)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/spoon.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>폴리프로필렌 밥이 붙지 않는 주걱</h4>
+            </div>
+            <div class="price">5,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(10)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/pen.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>컴팩트 겔 잉크 노크식 볼펜 블랙 0.5mm</h4>
+            </div>
+            <div class="price">2,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(119)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/carrier.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>높이 조절이 가능한 하드 캐리어 36L</h4>
+            </div>
+            <div class="price">249,000원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(119)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/fabric.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>진드기 방지 깃털 베개 화이트 43x63cm</h4>
+            </div>
+            <div class="price">14,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(119)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/pet.png" alt="" />
             </div>
             <div class="container">
               <h4>고양이 스크래처 장난감・물고기</h4>
             </div>
-              <div class="price">5,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(119)</span>
-              </div>
-            </article>
-          </div>
-          <div id="food" class="product-grid tab-content">
-            <article class="article">
-              <div class="background">
-                <img src="images/curry.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>고추 치킨 카레</h4>
-              </div>
-              <div class="price">4,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(40)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/koreanwhitesoup.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>한우사골떡국</h4>
-              </div>
-              <div class="price">4,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(119)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/koreanbrownsoup.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>재료의 맛을 살린 청국장</h4>
-              </div>
-              <div class="price">5,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(119)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/koreanleaf.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>매일 매일 반찬 명이나물</h4>
-              </div>
-              <div class="price">4,500원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(119)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/snack.png" alt="" />
-              </div>
-              <div class="badge">SNS 인기</div>
-              <div class="container">
-                <h4>옛날과자 옥수수 과자 매콤한 맛</h4>
-              </div>
-              <div class="price">1,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(24)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/snack2.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>비스킷 · 크래커 스페큘라스</h4>
-              </div>
-              <div class="price">3,500원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.8</span>
-                <span>(98)</span>
-              </div>
-            </article>
-            <article class="article">
-              <div class="background">
-                <img src="images/matchasnack.png" alt="" />
-              </div>
-              <div class="container">
-                <h4>녹차 초코 딸기</h4>
-              </div>
-              <div class="price">4,900원</div>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #7f0019;"></i>
-                <span>4.9</span>
-                <span>(10)</span>
-              </div>
-            </article>
+            <div class="price">5,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(119)</span>
+            </div>
+          </article>
+        </div>
+        <div id="food" class="product-grid tab-content">
+          <article class="article">
+            <div class="background">
+              <img src="images/chickencurry.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>고추 치킨 카레</h4>
+            </div>
+            <div class="price">4,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(40)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/koreanwhitesoup.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>한우사골떡국</h4>
+            </div>
+            <div class="price">4,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(119)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/koreanbrownsoup.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>재료의 맛을 살린 청국장</h4>
+            </div>
+            <div class="price">5,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(119)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/koreanleaf.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>매일 매일 반찬 명이나물</h4>
+            </div>
+            <div class="price">4,500원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(119)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/oldsnack.png" alt="" />
+            </div>
+            <div class="badge">SNS 인기</div>
+            <div class="container">
+              <h4>옛날과자 옥수수 과자 매콤한 맛</h4>
+            </div>
+            <div class="price">1,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(24)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/snack2.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>비스킷 · 크래커 스페큘라스</h4>
+            </div>
+            <div class="price">3,500원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.8</span>
+              <span>(98)</span>
+            </div>
+          </article>
+          <article class="article">
+            <div class="background">
+              <img src="images/matchasnack.png" alt="" />
+            </div>
+            <div class="container">
+              <h4>녹차 초코 딸기</h4>
+            </div>
+            <div class="price">4,900원</div>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #7f0019;"></i>
+              <span>4.9</span>
+              <span>(10)</span>
+            </div>
+          </article>
 
-          </div>
-        </div>
-      </section>
-      <!-- Featured Collections -->
-      <section class="section collections">
-        <div class="collection-container">
-          <!-- Right: Sticky Container -->
-          <div class="sticky-container">
-            <img src="images/2025winter.png" alt="2025 Winter Styling" />
-            <div class="text-overlay">
-              <p class="description">겨울의 시작, 포근한 온기를 전하는 25AW 아이템</p>
-              <h2 class="title">2025 Winter Styling</h2>
-            </div>
-          </div>
-          <!-- Left: Articles Background -->
-            <div class="articles-background">
-              <!-- Article 1: 향기로 살아가다 -->
-              <article class="featured-article">
-                <a href="#" class="article-link">
-                  <div class="article-main-image">
-                    <img src="images/fragrance.png" alt="NEW 프레그런스" />
-                  </div>
-                  </a>
-                  <div class="article-content">
-                    <div class="article-descriptions">
-                      <h3>향기로 살아가다</h3>
-                      <p>식물의 힘을 살려 자연스럽고 부드러운 향의 무인양품 프레그런스<br />오일. 기분이나 장소에 어울리는 향을 선택해 보세요.</p>
-                    </div>
-                
-                                  <div class="product-cards">
-                    <div class="product-card">
-                      <div class="product-image">
-                        <img src="images/oilwoody.png" alt="인테리어 프레그런스 오일 우디 디퓨저 100ml" />
-                      </div>
-                      <h4>인테리어 프레그런스 오일<br />우디 디퓨저 100ml</h4>
-                      <p class="price">14,900원</p>
-                    </div>
-                    <div class="product-card">
-                      <div class="product-image">
-                        <img src="images/floraloil.png" alt="인테리어 프레그런스 오일 리필용 플로럴 디퓨저 200ml" />
-                      </div>
-                      <h4>인테리어 프레그런스 오일<br />리필용 플로럴 디퓨저…<br />200ml</h4>
-                      <p class="price">19,900원</p>
-                    </div>
-                    <div class="product-card">
-                      <div class="product-image">
-                        <img src="images/rattanstick.png" alt="라탄 스틱 200ml용" />
-                      </div>
-                      <h4>라탄 스틱 200ml용</h4>
-                      <p class="price">3,900원</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <!-- Article 2: 나만의 주방 -->
-              <article class="featured-article">
-                <a href="#" class="article-link">
-                  <div class="article-main-image">
-                    <img src="images/cookingtool.png" alt="조리도구· 식기 시리즈" />
-                  </div>
-                  <div class="article-descriptions">
-                    <h3>나만의 주방을 가꾸는 방법</h3>
-                    <p>맛있는 음식, 즐거운 식사 시간을 만드는 방법. 편리하고 내구성이<br />좋은 조리도구부터 어떤 음식에도 조화롭게 어울리는 식기까지.</p>
-                  </div>
-                </a>
-                <div class="product-cards">
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/glasscup.png" alt="유리 컵· 약 350ml" />
-                    </div>
-                    <h4>유리 컵 · 약 350ml</h4>
-                    <p class="price">2,900원</p>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/fan.png" alt="굽는 면적을 넓힌 다용도 프라이팬 20cm" />
-                    </div>
-                    <h4>굽는 면적을 넓힌 다용도<br />프라이팬 20cm</h4>
-                    <p class="price">29,900원</p>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/spoon.png" alt="폴리프로필렌 밥이 붙지 않는 주걱" />
-                    </div>
-                    <h4>폴리프로필렌 밥이 붙지<br />않는 주걱</h4>
-                    <p class="price">5,900원</p>
-                  </div>
-                </div>
-              </article>
-              <!-- Article 3: 파자마 -->
-              <article class="featured-article">
-                <a href="#" class="article-link">
-                  <div class="article-main-image">
-                    <img src="images/lightpajamas.png" alt="가볍고 편안한 파자마" />
-                  </div>
-                  <div class="article-descriptions">
-                    <h3>소중한 사람과 함께 입는 파자마</h3>
-                    <p>커플, 가족, 친구 등 소중한 사람들과 함께 입기 좋은 무인양품<br />파자마 시리즈. 가볍고 편안한 파자마를 지금 만나보세요.</p>
-                  </div>
-                </a>
-                <div class="product-cards">
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/womenpajamas.png" alt="여성 사이드 심리스 플란넬 긴소매 파자마" />
-                    </div>
-                    <h4>여성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
-                    <p class="price">69,900원</p>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/menpajamas.png" alt="남성 사이드 심리스 플란넬 긴소매 파자마" />
-                    </div>
-                    <h4>남성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
-                    <p class="price">69,900원</p>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/mencolor.png" alt="남성 정전기 발생이 적은 화이버 스탠드 칼라 파자마" />
-                    </div>
-                    <h4>남성 정전기 발생이 적은<br />화이버 스탠드 칼라 파자마</h4>
-                    <p class="price">69,900원</p>
-                  </div>
-                </div>
-              </article>
-              <!-- Article 4: 특가혜택 -->
-              <article class="featured-article">
-                <a href="#" class="article-link">
-                  <div class="article-main-image">
-                    <img src="images/mujicraft.png" alt="한정 수량 특가 혜택" />
-                  </div>
-                  <div class="article-descriptions">
-                    <h3>좋은데 저렴하니까!</h3>
-                    <p>무인양품이 준비한 특별한 쇼핑 즐기기! 좋은데 저렴한 무인양품의<br />다양한 상품을 지금 바로 만나보세요.</p>
-                  </div>
-                </a>
-                <div class="product-cards">
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/skirt.png" alt="워셔블 퀼팅 미니스커트" />
-                    </div>
-                    <h4>워셔블 퀼팅 미니스커트</h4>
-                    <p class="original-price">59,900원</p>
-                    <div class="discount-price">
-                      <span class="discount">67%</span>
-                      <span class="price">19,900원</span>
-                    </div>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/fullover.png" alt="이중 편직 테리 풀오버 파카" />
-                    </div>
-                    <h4>이중 편직 테리 풀오버<br />파카</h4>
-                    <p class="original-price">79,900원</p>
-                    <div class="discount-price">
-                      <span class="discount">50%</span>
-                      <span class="price">39,900원</span>
-                    </div>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/inner.png" alt="UV 컷 건조가 빠른 하프 톱 브라" />
-                    </div>
-                    <h4>UV 컷 건조가 빠른 하프<br />톱 브라</h4>
-                    <p class="original-price">29,900원</p>
-                    <div class="discount-price">
-                      <span class="discount">60%</span>
-                      <span class="price">11,900원</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-          </div>
-        </div>
-        <div class="collection-container reverse">
-          <!-- Right: Sticky Container -->
-          <div class="sticky-container">
-            <img src="images/2025winter.png" alt="2025 Winter Styling" />
-            <div class="text-overlay">
-              <p class="description">겨울의 시작, 포근한 온기를 전하는 25AW 아이템</p>
-              <h2 class="title">2025 Winter Styling</h2>
-            </div>
-          </div>
-          <!-- Left: Articles Background -->
-            <div class="articles-background">
-              <!-- Article 1: 향기로 살아가다 -->
-              <article class="featured-article">
-                <a href="#" class="article-link">
-                  <div class="article-main-image">
-                    <img src="images/fragrance.png" alt="NEW 프레그런스" />
-                  </div>
-                  </a>
-                  <div class="article-content">
-                    <div class="article-descriptions">
-                      <h3>향기로 살아가다</h3>
-                      <p>식물의 힘을 살려 자연스럽고 부드러운 향의 무인양품 프레그런스<br />오일. 기분이나 장소에 어울리는 향을 선택해 보세요.</p>
-                    </div>
-                                  
-                                  <div class="product-cards">
-                    <div class="product-card">
-                      <div class="product-image">
-                        <img src="images/oilwoody.png" alt="인테리어 프레그런스 오일 우디 디퓨저 100ml" />
-                      </div>
-                      <h4>인테리어 프레그런스 오일<br />우디 디퓨저 100ml</h4>
-                      <p class="price">14,900원</p>
-                    </div>
-                    <div class="product-card">
-                      <div class="product-image">
-                        <img src="images/floraloil.png" alt="인테리어 프레그런스 오일 리필용 플로럴 디퓨저 200ml" />
-                      </div>
-                      <h4>인테리어 프레그런스 오일<br />리필용 플로럴 디퓨저…<br />200ml</h4>
-                      <p class="price">19,900원</p>
-                    </div>
-                    <div class="product-card">
-                      <div class="product-image">
-                        <img src="images/rattanstick.png" alt="라탄 스틱 200ml용" />
-                      </div>
-                      <h4>라탄 스틱 200ml용</h4>
-                      <p class="price">3,900원</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <!-- Article 2: 나만의 주방 -->
-              <article class="featured-article">
-                <a href="#" class="article-link">
-                  <div class="article-main-image">
-                    <img src="images/cookingtool.png" alt="조리도구· 식기 시리즈" />
-                  </div>
-                  <div class="article-descriptions">
-                    <h3>나만의 주방을 가꾸는 방법</h3>
-                    <p>맛있는 음식, 즐거운 식사 시간을 만드는 방법. 편리하고 내구성이<br />좋은 조리도구부터 어떤 음식에도 조화롭게 어울리는 식기까지.</p>
-                  </div>
-                </a>
-                <div class="product-cards">
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/glasscup.png" alt="유리 컵· 약 350ml" />
-                    </div>
-                    <h4>유리 컵 · 약 350ml</h4>
-                    <p class="price">2,900원</p>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/fan.png" alt="굽는 면적을 넓힌 다용도 프라이팬 20cm" />
-                    </div>
-                    <h4>굽는 면적을 넓힌 다용도<br />프라이팬 20cm</h4>
-                    <p class="price">29,900원</p>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/spoon.png" alt="폴리프로필렌 밥이 붙지 않는 주걱" />
-                    </div>
-                    <h4>폴리프로필렌 밥이 붙지<br />않는 주걱</h4>
-                    <p class="price">5,900원</p>
-                  </div>
-                </div>
-              </article>
-              <!-- Article 3: 파자마 -->
-              <article class="featured-article">
-                <a href="#" class="article-link">
-                  <div class="article-main-image">
-                    <img src="images/lightpajamas.png" alt="가볍고 편안한 파자마" />
-                  </div>
-                  <div class="article-descriptions">
-                    <h3>소중한 사람과 함께 입는 파자마</h3>
-                    <p>커플, 가족, 친구 등 소중한 사람들과 함께 입기 좋은 무인양품<br />파자마 시리즈. 가볍고 편안한 파자마를 지금 만나보세요.</p>
-                  </div>
-                </a>
-                <div class="product-cards">
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/womenpajamas.png" alt="여성 사이드 심리스 플란넬 긴소매 파자마" />
-                    </div>
-                    <h4>여성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
-                    <p class="price">69,900원</p>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/menpajamas.png" alt="남성 사이드 심리스 플란넬 긴소매 파자마" />
-                    </div>
-                    <h4>남성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
-                    <p class="price">69,900원</p>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/mencolor.png" alt="남성 정전기 발생이 적은 화이버 스탠드 칼라 파자마" />
-                    </div>
-                    <h4>남성 정전기 발생이 적은<br />화이버 스탠드 칼라 파자마</h4>
-                    <p class="price">69,900원</p>
-                  </div>
-                </div>
-              </article>
-              <!-- Article 4: 특가혜택 -->
-              <article class="featured-article">
-                <a href="#" class="article-link">
-                  <div class="article-main-image">
-                    <img src="images/mujicraft.png" alt="한정 수량 특가 혜택" />
-                  </div>
-                  <div class="article-descriptions">
-                    <h3>좋은데 저렴하니까!</h3>
-                    <p>무인양품이 준비한 특별한 쇼핑 즐기기! 좋은데 저렴한 무인양품의<br />다양한 상품을 지금 바로 만나보세요.</p>
-                  </div>
-                </a>
-                <div class="product-cards">
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/skirt.png" alt="워셔블 퀼팅 미니스커트" />
-                    </div>
-                    <h4>워셔블 퀼팅 미니스커트</h4>
-                    <p class="original-price">59,900원</p>
-                    <div class="discount-price">
-                      <span class="discount">67%</span>
-                      <span class="price">19,900원</span>
-                    </div>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/fullover.png" alt="이중 편직 테리 풀오버 파카" />
-                    </div>
-                    <h4>이중 편직 테리 풀오버<br />파카</h4>
-                    <p class="original-price">79,900원</p>
-                    <div class="discount-price">
-                      <span class="discount">50%</span>
-                      <span class="price">39,900원</span>
-                    </div>
-                  </div>
-                  <div class="product-card">
-                    <div class="product-image">
-                      <img src="images/inner.png" alt="UV 컷 건조가 빠른 하프 톱 브라" />
-                    </div>
-                    <h4>UV 컷 건조가 빠른 하프<br />톱 브라</h4>
-                    <p class="original-price">29,900원</p>
-                    <div class="discount-price">
-                      <span class="discount">60%</span>
-                      <span class="price">11,900원</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            <!-- More Button -->
-            <a href="#" class="more-link">기획전 더보기</a>
-          </div>
-        </div>
-      </section>
-      <!-- From MUJI Section -->
-      <section class="section from-muji">
-        <h2>From MUJI</h2>
-        <div class="grid-layout">
-          <div class="link">
-            <img src="images/mujisociety.png" alt="" />
-          </div>
-          <div class="link">
-            <img src="images/mujirecycle.png" alt="" />
-          </div>
-          <div class="link">
-            <img src="images/mujiopen.png" alt="" />
-          </div>
-          <div class="link">
-            <img src="images/mujigrandopen.png" alt="" />
-          </div>
-          <div class="link">
-            <img src="images/mujiopen2.png" alt="" />
-          </div>
-          <div class="link">
-            <img src="images/mujierase.png" alt="" />
-          </div>
-          <div class="link">
-            <img src="images/mujiopen3.png" alt="" />
-          </div>
-          <div class="link">
-            <img src="images/mujinature.png" alt="" />
-          </div>
-          <div class="link">
-            <img src="images/mujiart.png" alt="" />
-          </div>
-        </div>
-        <button class="more-button">From MUJI 더보기</button>
-      </section>
-    </main>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-nav">
-        <a href="#">About MUJI</a>
-        <a href="#">채용공고</a>
-        <a href="#">매장안내</a>
-        <a href="#">이용약관</a>
-        <a href="#">개인정보처리방침</a>
-      </div>
-      <div class="footer-content">
-        <div class="footer-column left">
-          <div class="logo">
-            <img src="images/mujilogo.png" alt="MUJI 로고" />
-          </div>
-          <div class="footer-links">
-            <a href="#">고객센터</a>
-            <a href="#">공지사항</a>
-            <a href="#">1:1문의</a>
-            <a href="#">제휴문의</a>
-          </div>
-        </div>
-        <div class="footer-column center">
-          <div class="company-info">
-            <p>상호명 : 무인양품(주)</p>
-            <p>대표 : NINOMIYA KENICHIRO,현종혁</p>
-            <p>주소 : 서울 중구 서소문로 50 10층</p>
-            <p>(중림동,CENTRALPLACE)</p>
-            <p>사업자번호 : 105-86-73836</p>
-            <p>통신판매업신고 : 2024-서울중구-1904</p>
-          </div>
-          <div class="social-links">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-        </div>
-        <div class="footer-column right">
-          <div class="customer-service">
-            <p>고객만족센터 : 1551-3780</p>
-            <p>운영시간 : 평일 09:30 ~ 18:30 (주말, 공휴일 휴무)</p>
-            <p>점심시간 12:30 ~ 13:30</p>
-          </div>
-          <div class="customer-safepay">
-            <p>고객님의 안전거래를 위해 현금 등으로 결제 시 결제금액의 전액에 대해 저희 쇼핑몰에서 가입한 소비자 피해 보상보험 서비스를 이용하실 수 있습니다.</p>
-          </div>
-          <a href="#" class="auth-link">임직원 인증</a>
-          <button class="global-site-btn">GLOBAL SITE <span>&gt;</span></button>
         </div>
       </div>
-    </footer>
-    <!-- Floating Buttons -->
-    <div class="container floating-buttons">
-      <button class="floating-button">
-        <i class="fa-solid fa-arrow-rotate-left"></i>
-      </button>
-      <button class="floating-button">
-        <i class="fa-solid fa-angle-up"></i>
-      </button>
-    <!-- 하단 탭바 -->
-<nav class="bottom-nav">
-  <div class="nav-item">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-  <div class="nav-item">
-    <i class="fa-solid fa-qrcode"></i>
-  </div>
-  <div class="nav-item">
-    <i class="fa-solid fa-house"></i>
-  </div>
-  <div class="nav-item">
-    <i class="fa-solid fa-heart"></i>
-  </div>
-  <div class="nav-item">
-    <i class="fa-solid fa-user"></i>
-  </div>
-</nav>
+    </section>
+    <!-- Featured Collections -->
+    <section class="section collections">
+      <div class="collection-container">
+        <!-- Right: Sticky Container -->
+        <div class="sticky-container">
+          <img src="images/2025winter.png" alt="2025 Winter Styling" />
+          <div class="text-overlay">
+            <p class="description">겨울의 시작, 포근한 온기를 전하는 25AW 아이템</p>
+            <h2 class="title">2025 Winter Styling</h2>
+          </div>
+        </div>
+        <!-- Left: Articles Background -->
+        <div class="articles-background">
+          <!-- Article 1: 향기로 살아가다 -->
+          <article class="featured-article">
+            <a href="#" class="article-link">
+              <div class="article-main-image">
+                <img src="images/fragrance.png" alt="NEW 프레그런스" />
+              </div>
+            </a>
+            <div class="article-content">
+              <div class="article-descriptions">
+                <h3>향기로 살아가다</h3>
+                <p>식물의 힘을 살려 자연스럽고 부드러운 향의 무인양품 프레그런스<br />오일. 기분이나 장소에 어울리는 향을 선택해 보세요.</p>
+              </div>
+
+              <div class="product-cards">
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="images/oilwoody.png" alt="인테리어 프레그런스 오일 우디 디퓨저 100ml" />
+                  </div>
+                  <div class="product-info">
+                    <h4>인테리어 프레그런스 오일<br />우디 디퓨저 100ml</h4>
+                    <p class="price">14,900원</p>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="images/floraloil.png" alt="인테리어 프레그런스 오일 리필용 플로럴 디퓨저 200ml" />
+                  </div>
+                  <div class="product-info">
+                    <h4>인테리어 프레그런스 오일<br />리필용 플로럴 디퓨저…<br />200ml</h4>
+                    <p class="price">19,900원</p>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="images/rattanstick.png" alt="라탄 스틱 200ml용" />
+                  </div>
+                  <div class="product-info">
+                    <h4>라탄 스틱 200ml용</h4>
+                    <p class="price">3,900원</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Article 2: 나만의 주방 -->
+          <article class="featured-article">
+            <a href="#" class="article-link">
+              <div class="article-main-image">
+                <img src="images/cookingtool.png" alt="조리도구· 식기 시리즈" />
+              </div>
+              <div class="article-descriptions">
+                <h3>나만의 주방을 가꾸는 방법</h3>
+                <p>맛있는 음식, 즐거운 식사 시간을 만드는 방법. 편리하고 내구성이<br />좋은 조리도구부터 어떤 음식에도 조화롭게 어울리는 식기까지.</p>
+              </div>
+            </a>
+            <div class="product-cards">
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/glasscup.png" alt="유리 컵· 약 350ml" />
+                </div>
+                <div class="product-info">
+                  <h4>유리 컵 · 약 350ml</h4>
+                  <p class="price">2,900원</p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/fan.png" alt="굽는 면적을 넓힌 다용도 프라이팬 20cm" />
+                </div>
+                <div class="product-info">
+                  <h4>굽는 면적을 넓힌 다용도<br />프라이팬 20cm</h4>
+                  <p class="price">29,900원</p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/spoon.png" alt="폴리프로필렌 밥이 붙지 않는 주걱" />
+                </div>
+                <div class="product-info">
+                  <h4>폴리프로필렌 밥이 붙지<br />않는 주걱</h4>
+                  <p class="price">5,900원</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Article 3: 파자마 -->
+          <article class="featured-article">
+            <a href="#" class="article-link">
+              <div class="article-main-image">
+                <img src="images/lightpajamas.png" alt="가볍고 편안한 파자마" />
+              </div>
+              <div class="article-descriptions">
+                <h3>소중한 사람과 함께 입는 파자마</h3>
+                <p>커플, 가족, 친구 등 소중한 사람들과 함께 입기 좋은 무인양품<br />파자마 시리즈. 가볍고 편안한 파자마를 지금 만나보세요.</p>
+              </div>
+            </a>
+            <div class="product-cards">
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/womenpajamas.png" alt="여성 사이드 심리스 플란넬 긴소매 파자마" />
+                </div>
+                <div class="product-info">
+                  <h4>여성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
+                  <p class="price">69,900원</p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/menpajamas.png" alt="남성 사이드 심리스 플란넬 긴소매 파자마" />
+                </div>
+                <div class="product-info">
+                  <h4>남성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
+                  <p class="price">69,900원</p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/mencolor.png" alt="남성 정전기 발생이 적은 화이버 스탠드 칼라 파자마" />
+                </div>
+                <div class="product-info">
+                  <h4>남성 정전기 발생이 적은<br />화이버 스탠드 칼라 파자마</h4>
+                  <p class="price">69,900원</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Article 4: 특가혜택 -->
+          <article class="featured-article">
+            <a href="#" class="article-link">
+              <div class="article-main-image">
+                <img src="images/mujicraft.png" alt="한정 수량 특가 혜택" />
+              </div>
+              <div class="article-descriptions">
+                <h3>좋은데 저렴하니까!</h3>
+                <p>무인양품이 준비한 특별한 쇼핑 즐기기! 좋은데 저렴한 무인양품의<br />다양한 상품을 지금 바로 만나보세요.</p>
+              </div>
+            </a>
+            <div class="product-cards">
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/skirt.png" alt="워셔블 퀼팅 미니스커트" />
+                </div>
+                <div class="product-info">
+                  <h4>워셔블 퀼팅 미니스커트</h4>
+                  <p class="original-price">59,900원</p>
+                  <div class="discount-price">
+                    <span class="discount">67%</span>
+                    <span class="price">19,900원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/fullover.png" alt="이중 편직 테리 풀오버 파카" />
+                </div>
+                <div class="product-info">
+                  <h4>이중 편직 테리 풀오버<br />파카</h4>
+                  <p class="original-price">79,900원</p>
+                  <div class="discount-price">
+                    <span class="discount">50%</span>
+                    <span class="price">39,900원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/inner.png" alt="UV 컷 건조가 빠른 하프 톱 브라" />
+                </div>
+                <h4>UV 컷 건조가 빠른 하프<br />톱 브라</h4>
+                <p class="original-price">29,900원</p>
+                <div class="discount-price">
+                  <span class="discount">60%</span>
+                  <span class="price">11,900원</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="collection-container reverse">
+        <!-- Right: Sticky Container -->
+        <div class="sticky-container">
+          <img src="images/2025winter.png" alt="2025 Winter Styling" />
+          <div class="text-overlay">
+            <p class="description">겨울의 시작, 포근한 온기를 전하는 25AW 아이템</p>
+            <h2 class="title">2025 Winter Styling</h2>
+          </div>
+        </div>
+        <!-- Left: Articles Background -->
+        <div class="articles-background">
+          <!-- Article 1: 향기로 살아가다 -->
+          <article class="featured-article">
+            <a href="#" class="article-link">
+              <div class="article-main-image">
+                <img src="images/fragrance.png" alt="NEW 프레그런스" />
+              </div>
+            </a>
+            <div class="article-content">
+              <div class="article-descriptions">
+                <h3>향기로 살아가다</h3>
+                <p>식물의 힘을 살려 자연스럽고 부드러운 향의 무인양품 프레그런스<br />오일. 기분이나 장소에 어울리는 향을 선택해 보세요.</p>
+              </div>
+
+              <div class="product-cards">
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="images/oilwoody.png" alt="인테리어 프레그런스 오일 우디 디퓨저 100ml" />
+                  </div>
+                  <div class="product-info">
+                    <h4>인테리어 프레그런스 오일<br />우디 디퓨저 100ml</h4>
+                    <p class="price">14,900원</p>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="images/floraloil.png" alt="인테리어 프레그런스 오일 리필용 플로럴 디퓨저 200ml" />
+                  </div>
+                  <div class="product-info">
+                    <h4>인테리어 프레그런스 오일<br />리필용 플로럴 디퓨저…<br />200ml</h4>
+                    <p class="price">19,900원</p>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="images/rattanstick.png" alt="라탄 스틱 200ml용" />
+                  </div>
+                  <div class="product-info">
+                    <h4>라탄 스틱 200ml용</h4>
+                    <p class="price">3,900원</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Article 2: 나만의 주방 -->
+          <article class="featured-article">
+            <a href="#" class="article-link">
+              <div class="article-main-image">
+                <img src="images/cookingtool.png" alt="조리도구· 식기 시리즈" />
+              </div>
+              <div class="article-descriptions">
+                <h3>나만의 주방을 가꾸는 방법</h3>
+                <p>맛있는 음식, 즐거운 식사 시간을 만드는 방법. 편리하고 내구성이<br />좋은 조리도구부터 어떤 음식에도 조화롭게 어울리는 식기까지.</p>
+              </div>
+            </a>
+            <div class="product-cards">
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/glasscup.png" alt="유리 컵· 약 350ml" />
+                </div>
+                <div class="product-info">
+                  <h4>유리 컵 · 약 350ml</h4>
+                  <p class="price">2,900원</p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/fan.png" alt="굽는 면적을 넓힌 다용도 프라이팬 20cm" />
+                </div>
+                <div class="product-info">
+                  <h4>굽는 면적을 넓힌 다용도<br />프라이팬 20cm</h4>
+                  <p class="price">29,900원</p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/spoon.png" alt="폴리프로필렌 밥이 붙지 않는 주걱" />
+                </div>
+                <div class="product-info">
+                  <h4>폴리프로필렌 밥이 붙지<br />않는 주걱</h4>
+                  <p class="price">5,900원</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Article 3: 파자마 -->
+          <article class="featured-article">
+            <a href="#" class="article-link">
+              <div class="article-main-image">
+                <img src="images/lightpajamas.png" alt="가볍고 편안한 파자마" />
+              </div>
+              <div class="article-descriptions">
+                <h3>소중한 사람과 함께 입는 파자마</h3>
+                <p>커플, 가족, 친구 등 소중한 사람들과 함께 입기 좋은 무인양품<br />파자마 시리즈. 가볍고 편안한 파자마를 지금 만나보세요.</p>
+              </div>
+            </a>
+            <div class="product-cards">
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/womenpajamas.png" alt="여성 사이드 심리스 플란넬 긴소매 파자마" />
+                </div>
+                <div class="product-info">
+                  <h4>여성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
+                  <p class="price">69,900원</p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/menpajamas.png" alt="남성 사이드 심리스 플란넬 긴소매 파자마" />
+                </div>
+                <div class="product-info">
+                  <h4>남성 사이드 심리스 플란넬<br />긴소매 파자마</h4>
+                  <p class="price">69,900원</p>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/mencolor.png" alt="남성 정전기 발생이 적은 화이버 스탠드 칼라 파자마" />
+                </div>
+                <div class="product-info">
+                  <h4>남성 정전기 발생이 적은<br />화이버 스탠드 칼라 파자마</h4>
+                  <p class="price">69,900원</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Article 4: 특가혜택 -->
+          <article class="featured-article">
+            <a href="#" class="article-link">
+              <div class="article-main-image">
+                <img src="images/mujicraft.png" alt="한정 수량 특가 혜택" />
+              </div>
+              <div class="article-descriptions">
+                <h3>좋은데 저렴하니까!</h3>
+                <p>무인양품이 준비한 특별한 쇼핑 즐기기! 좋은데 저렴한 무인양품의<br />다양한 상품을 지금 바로 만나보세요.</p>
+              </div>
+            </a>
+            <div class="product-cards">
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/skirt.png" alt="워셔블 퀼팅 미니스커트" />
+                </div>
+                <div class="product-info">
+                  <h4>워셔블 퀼팅 미니스커트</h4>
+                  <p class="original-price">59,900원</p>
+                  <div class="discount-price">
+                    <span class="discount">67%</span>
+                    <span class="price">19,900원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/fullover.png" alt="이중 편직 테리 풀오버 파카" />
+                </div>
+                <div class="product-info">
+                  <h4>이중 편직 테리 풀오버<br />파카</h4>
+                  <p class="original-price">79,900원</p>
+                  <div class="discount-price">
+                    <span class="discount">50%</span>
+                    <span class="price">39,900원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="images/inner.png" alt="UV 컷 건조가 빠른 하프 톱 브라" />
+                </div>
+                <div class="product-info">
+                  <h4>UV 컷 건조가 빠른 하프<br />톱 브라</h4>
+                  <p class="original-price">29,900원</p>
+                  <div class="discount-price">
+                    <span class="discount">60%</span>
+                    <span class="price">11,900원</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- More Button -->
+          <a href="#" class="more-link">기획전 더보기</a>
+        </div>
+      </div>
+    </section>
+    <!-- From MUJI Section -->
+    <section class="section from-muji">
+      <h2>From MUJI</h2>
+      <div class="grid-layout">
+        <div class="link">
+          <img src="images/mujisociety.png" alt="" />
+        </div>
+        <div class="link">
+          <img src="images/mujirecycle.png" alt="" />
+        </div>
+        <div class="link">
+          <img src="images/mujiopen.png" alt="" />
+        </div>
+        <div class="link">
+          <img src="images/mujigrandopen.png" alt="" />
+        </div>
+        <div class="link">
+          <img src="images/mujiopen2.png" alt="" />
+        </div>
+        <div class="link">
+          <img src="images/mujierase.png" alt="" />
+        </div>
+        <div class="link">
+          <img src="images/mujiopen3.png" alt="" />
+        </div>
+        <div class="link">
+          <img src="images/mujinature.png" alt="" />
+        </div>
+        <div class="link">
+          <img src="images/mujiart.png" alt="" />
+        </div>
+      </div>
+      <button class="more-button">From MUJI 더보기</button>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-nav">
+      <a href="#">About MUJI</a>
+      <a href="#">채용공고</a>
+      <a href="#">매장안내</a>
+      <a href="#">이용약관</a>
+      <a href="#">개인정보처리방침</a>
     </div>
-    <script>
-  const popup = document.querySelector('.popup-container');
-  const closeBtn = document.querySelector('.close');
-  const todayCheck = document.querySelector('#todayCheck');
-  document.addEventListener('DOMContentLoaded', () => {
+    <div class="footer-content">
+      <div class="footer-column left">
+        <div class="logo">
+          <img src="images/mujilogo.png" alt="MUJI 로고" />
+        </div>
+        <div class="footer-links">
+          <a href="#">고객센터</a>
+          <a href="#">공지사항</a>
+          <a href="#">1:1문의</a>
+          <a href="#">제휴문의</a>
+        </div>
+      </div>
+      <div class="footer-column center">
+        <div class="company-info">
+          <p>상호명 : 무인양품(주)</p>
+          <p>대표 : NINOMIYA KENICHIRO,현종혁</p>
+          <p>주소 : 서울 중구 서소문로 50 10층</p>
+          <p>(중림동,CENTRALPLACE)</p>
+          <p>사업자번호 : 105-86-73836</p>
+          <p>통신판매업신고 : 2024-서울중구-1904</p>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column right">
+        <div class="customer-service">
+          <p>고객만족센터 : 1551-3780</p>
+          <p>운영시간 : 평일 09:30 ~ 18:30 (주말, 공휴일 휴무)</p>
+          <p>점심시간 12:30 ~ 13:30</p>
+        </div>
+        <div class="customer-safepay">
+          <p>고객님의 안전거래를 위해 현금 등으로 결제 시 결제금액의 전액에 대해 저희 쇼핑몰에서 가입한 소비자 피해 보상보험 서비스를 이용하실 수 있습니다.</p>
+        </div>
+        <a href="#" class="auth-link">임직원 인증</a>
+        <button class="global-site-btn">GLOBAL SITE <span>&gt;</span></button>
+      </div>
+    </div>
+  </footer>
+  <!-- Floating Buttons -->
+  <div class="container floating-buttons">
+    <button class="floating-button">
+      <i class="fa-solid fa-arrow-rotate-left"></i>
+    </button>
+    <button class="floating-button">
+      <i class="fa-solid fa-angle-up"></i>
+    </button>
+    <!-- 하단 탭바 -->
+    <nav class="bottom-nav">
+      <div class="nav-item">
+        <img src="images/icon-menu.svg" alt="">
+      </div>
+      <div class="nav-item">
+        <img src="images/icon-barcode.svg" alt="">
+      </div>
+      <div class="nav-item">
+        <img src="images/icon-home.svg" alt="">
+      </div>
+      <div class="nav-item">
+        <img src="images/icon-heart.svg" alt="">
+      </div>
+      <div class="nav-item">
+        <img src="images/icon-mypage.svg" alt="">
+      </div>
+    </nav>
+  </div>
+  <script>
+    const popup = document.querySelector('.popup-container');
+    const closeBtn = document.querySelector('.close');
+    const todayCheck = document.querySelector('#todayCheck');
+    document.addEventListener('DOMContentLoaded', () => {
       const expires = localStorage.getItem('popupHiddenUntil');
       const now = new Date().getTime();
       if (!expires || now > expires) {
-          popup.style.display = 'flex';
+        popup.style.display = 'flex';
       } else {
-          popup.style.display = 'none';
+        popup.style.display = 'none';
       }
-  });
-  closeBtn.addEventListener('click', () => {
+    });
+    closeBtn.addEventListener('click', () => {
       if (todayCheck.checked) {
-          const now = new Date();
-          const expiryTime = now.getTime() + (24 * 60 * 60 * 1000);
-          localStorage.setItem('popupHiddenUntil', expiryTime);
+        const now = new Date();
+        const expiryTime = now.getTime() + (24 * 60 * 60 * 1000);
+        localStorage.setItem('popupHiddenUntil', expiryTime);
       }
       popup.style.display = 'none';
-  });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

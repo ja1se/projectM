@@ -28,6 +28,24 @@ const swiper1 = new Swiper(".swiper1", {
     },
   },
 });
+
+let lastScrollY = 0; // 마지막 스크롤 위치 저장
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY && currentScrollY > 90) {
+    // 1. 스크롤을 내릴 때 (50px 이상 내려갔을 때만)
+    header.classList.add('hide');
+  } else {
+    // 2. 스크롤을 올릴 때
+    header.classList.remove('hide');
+  }
+
+  lastScrollY = currentScrollY; // 현재 위치를 마지막 위치로 업데이트
+});
+
 // // 1. 슬라이드 로직 수정
 // const slide = document.querySelectorAll('.slide');
 // const indicator = document.querySelector('.slide-indicator');
