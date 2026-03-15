@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPGK07LGM1"></script>
@@ -77,9 +78,12 @@
       <img src="images/mujilogo.png" alt="MUJI 로고" />
     </div>
     <div class="header-actions">
-      <button class="icon-button" aria-label="검색">
-        <img src="images/icon-search.svg" alt="" />
-      </button>
+      <div class="search-container">
+        <input type="text" class="search-input" />
+        <button class="icon-button search-button" aria-label="검색">
+          <img src="images/icon-search.svg" alt="" />
+        </button>
+      </div>
       <button class="icon-button" aria-label="마이페이지">
         <img src="images/icon-mypage.svg" alt="" />
       </button>
@@ -96,7 +100,7 @@
             <a href="#" class="depth1-title">BEST</a>
           </li>
           <li class="depth1-item">
-            <a href="#" class="depth1-title">의복</a>
+            <a href="#" class="depth1-title event">의복</a>
             <div class="mega">
               <div class="inner">
                 <ul class="depth2">
@@ -149,7 +153,7 @@
             </div>
           </li>
           <li class="depth1-item">
-            <a href="#" class="depth1-title">생활</a>
+            <a href="#" class="depth1-title event">생활</a>
             <div class="mega">
               <div class="inner">
                 <ul class="depth2">
@@ -196,7 +200,7 @@
             </div>
           </li>
           <li class="depth1-item">
-            <a href="#" class="depth1-title">식품</a>
+            <a href="#" class="depth1-title event">식품</a>
             <div class="mega">
               <div class="inner">
                 <ul class="depth2">
@@ -242,14 +246,18 @@
       <div class="swiper swiper1">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="images/newhabbit.jpg" alt="슬라이드1" />
-            <h2 class="slide-content">따뜻한 면 이너웨어</h2>
-            <p class="desc">면 본연의 힘을 살려 자연스럽고 부드러운 촉감의 따뜻한 면</p>
+            <img src="images/bed.jpg" alt="슬라이드2" />
+            <div class="slide-content">
+              <h2 class="title">꾸며내지 않은 자연스러운 질감</h2>
+              <p class="desc">자연의 품에서 깨어나는 듯한 평온함을 느껴보세요</p>
+            </div>
           </div>
           <div class="swiper-slide">
-            <img src="images/bed.jpg" alt="슬라이드2" />
-            <h2 class="slide-content">따뜻한 면 이너웨어</h2>
-            <p class="desc">면 본연의 힘을 살려 자연스럽고 부드러운 촉감의 따뜻한 면</p>
+            <img src="images/furniture.jpg" alt="슬라이드1" />
+            <div class="slide-content">
+              <h2 class="title">조용히 스며드는 일상 속 배경</h2>
+              <p class="desc">무인양품의 가구는 시간이 흐를수록 당신의 생활 습관을 닮아가며 조화로운 일상 속 풍경이 됩니다</p>
+            </div>
           </div>
           <div class="swiper-slide">
             <img src="images/warminner.jpg" alt="슬라이드3" />
@@ -971,10 +979,10 @@
       <div class="collection-container reverse">
         <!-- Right: Sticky Container -->
         <div class="sticky-container">
-          <img src="images/2025winter.png" alt="2025 Winter Styling" />
+          <img src="images/easypants.jpg" alt="Easy pants" />
           <div class="text-overlay">
-            <p class="description">겨울의 시작, 포근한 온기를 전하는 25AW 아이템</p>
-            <h2 class="title">2025 Winter Styling</h2>
+            <p class="description">편안한 일상을 위한 데일리 팬츠</p>
+            <h2 class="title">하루가 평안해지는 이지팬츠</h2>
           </div>
         </div>
         <!-- Left: Articles Background -->
@@ -1168,31 +1176,67 @@
       <h2>From MUJI</h2>
       <div class="grid-layout">
         <div class="link">
-          <img src="images/mujisociety.png" alt="" />
+          <img src="images/mujisociety.png" alt="Life and Art 전시" />
+          <div class="from-info">
+            <h4>새로운 생활과 기분전환, Life and Art 전시</h4>
+            <p class="from-dec">전시와 함께 새로운 계절의 기분 전환을 제안합니다.</p>
+          </div>
         </div>
         <div class="link">
-          <img src="images/mujirecycle.png" alt="" />
+          <img src="images/mujirecycle.png" alt="MUJI RECYCLE" />
+          <div class="from-info">
+            <h4>MUJI RECYCLE</h4>
+            <p class="from-dec">지구를 생각하는 무인양품의 재활용 캠페인</p>
+          </div>
         </div>
         <div class="link">
-          <img src="images/mujiopen.png" alt="" />
+          <img src="images/mujiopen.png" alt="MUJI OPEN" />
+          <div class="from-info">
+            <h4>무인양품 매장 오픈 안내</h4>
+            <p class="from-dec">새롭게 문을 연 무인양품 매장을 만나보세요.</p>
+          </div>
         </div>
         <div class="link">
-          <img src="images/mujigrandopen.png" alt="" />
+          <img src="images/mujigrandopen.png" alt="GRAND OPEN" />
+          <div class="from-info">
+            <h4>그랜드 오픈 이벤트</h4>
+            <p class="from-dec">오픈 기념 특별한 혜택과 이벤트를 확인하세요.</p>
+          </div>
         </div>
         <div class="link">
-          <img src="images/mujiopen2.png" alt="" />
+          <img src="images/mujiopen2.png" alt="MUJI NEW STORE" />
+          <div class="from-info">
+            <h4>새로운 경험의 시작</h4>
+            <p class="from-dec">더 넓고 쾌적해진 무인양품 스토어</p>
+          </div>
         </div>
         <div class="link">
-          <img src="images/mujierase.png" alt="" />
+          <img src="images/mujierase.png" alt="지우개 프로젝트" />
+          <div class="from-info">
+            <h4>지우개 프로젝트</h4>
+            <p class="from-dec">쓸모를 다한 물건에 새로운 가치를 더합니다.</p>
+          </div>
         </div>
         <div class="link">
-          <img src="images/mujiopen3.png" alt="" />
+          <img src="images/mujiopen3.png" alt="MUJI STYLE" />
+          <div class="from-info">
+            <h4>무인양품이 제안하는 스타일</h4>
+            <p class="from-dec">당신의 일상을 더 편안하게 만드는 아이템</p>
+          </div>
         </div>
         <div class="link">
-          <img src="images/mujinature.png" alt="" />
+          <img src="images/mujinature.png" alt="Nature with MUJI" />
+          <div class="from-info">
+            <h4>자연과 함께하는 삶</h4>
+            <p class="from-dec">자연에서 온 소재로 만든 기분 좋은 제품들</p>
+          </div>
         </div>
         <div class="link">
-          <img src="images/mujiart.png" alt="" />
+          <img src="images/mujiart.png" alt="MUJI ART" />
+          <div class="from-info">
+            <h4>일상 속의 예술</h4>
+            <p class="from-dec">무인양품이 전하는 예술적인 영감</p>
+          </div>
         </div>
       </div>
       <button class="more-button">From MUJI 더보기</button>
@@ -1275,10 +1319,13 @@
       </div>
     </nav>
   </div>
+  <!-- js : popup -->
   <script>
     const popup = document.querySelector('.popup-container');
     const closeBtn = document.querySelector('.close');
+    const closeXBtn = document.querySelector('.close-x-btn');
     const todayCheck = document.querySelector('#todayCheck');
+
     document.addEventListener('DOMContentLoaded', () => {
       const expires = localStorage.getItem('popupHiddenUntil');
       const now = new Date().getTime();
@@ -1288,12 +1335,17 @@
         popup.style.display = 'none';
       }
     });
+
     closeBtn.addEventListener('click', () => {
       if (todayCheck.checked) {
         const now = new Date();
         const expiryTime = now.getTime() + (24 * 60 * 60 * 1000);
         localStorage.setItem('popupHiddenUntil', expiryTime);
       }
+      popup.style.display = 'none';
+    });
+
+    closeXBtn.addEventListener('click', () => {
       popup.style.display = 'none';
     });
   </script>

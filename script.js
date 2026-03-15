@@ -169,3 +169,23 @@ infoToggle.addEventListener("click", function () {
   document.querySelector(".social-links").style.display = "none";
   this.classList.toggle("active");
 });
+
+// 6. 검색창 토글
+const searchButton = document.querySelector('.search-button');
+const searchContainer = document.querySelector('.search-container');
+const searchInput = document.querySelector('.search-input');
+
+searchButton.addEventListener('click', (e) => {
+  e.stopPropagation();
+  searchContainer.classList.toggle('active');
+  if (searchContainer.classList.contains('active')) {
+    searchInput.focus();
+  }
+});
+
+// 외부 클릭 시 검색창 닫기
+document.addEventListener('click', (e) => {
+  if (!searchContainer.contains(e.target) && searchContainer.classList.contains('active')) {
+    searchContainer.classList.remove('active');
+  }
+});

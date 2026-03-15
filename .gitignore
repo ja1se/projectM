@@ -34,3 +34,6 @@ Thumbs.db
 *.zip
 *.rar
 draft/
+
+## md
+*.md
