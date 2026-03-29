@@ -1,20 +1,11 @@
 const swiper1 = new Swiper(".swiper1", {
-  // ★ 핵심 설정: 슬라이드 너비를 CSS(.swiper-slide)에 설정한 대로 따름
   slidesPerView: "auto",
-
-  // 슬라이드 사이 간격 (0이면 다음 사진이 바로 붙어서 나옴)
   spaceBetween: 0,
-
-  // 무한 반복
   loop: true,
-
-  // 자동 재생 (8초)
   autoplay: {
     delay: 2000,
     disableOnInteraction: true,
   },
-
-  // 화살표 및 페이지네이션
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -29,65 +20,18 @@ const swiper1 = new Swiper(".swiper1", {
   },
 });
 
-let lastScrollY = 0; // 마지막 스크롤 위치 저장
+let lastScrollY = 0;
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
   const currentScrollY = window.scrollY;
-
   if (currentScrollY > lastScrollY && currentScrollY > 90) {
-    // 1. 스크롤을 내릴 때 (50px 이상 내려갔을 때만)
     header.classList.add('hide');
   } else {
-    // 2. 스크롤을 올릴 때
     header.classList.remove('hide');
   }
-
-  lastScrollY = currentScrollY; // 현재 위치를 마지막 위치로 업데이트
+  lastScrollY = currentScrollY;
 });
-
-// // 1. 슬라이드 로직 수정
-// const slide = document.querySelectorAll('.slide');
-// const indicator = document.querySelector('.slide-indicator');
-// let currentIndex = 0;
-
-// function updateIndicator() {
-//   if (indicator) {
-//     // slides.length -> slide.length 로 수정!
-//     indicator.innerText = `${currentIndex + 1} / ${slide.length}`;
-//   }
-// }
-
-// function nextSlide() {
-//   slide[currentIndex].classList.remove('active');
-//   currentIndex = (currentIndex + 1) % slide.length;
-//   slide[currentIndex].classList.add('active');
-//   updateIndicator();
-// }
-
-// let slideTimer = setInterval(nextSlide, 8000);
-
-// const prevBtn = document.querySelector('.slide-button.prev');
-// const nextBtn = document.querySelector('.slide-button.next');
-
-// if (nextBtn) {
-//   nextBtn.addEventListener('click', () => {
-//     clearInterval(slideTimer); // 버튼 클릭 시 타이머 초기화 센스!
-//     nextSlide();
-//     slideTimer = setInterval(nextSlide, 8000);
-//   });
-// }
-
-// if (prevBtn) {
-//   prevBtn.addEventListener('click', () => {
-//     clearInterval(slideTimer);
-//     slide[currentIndex].classList.remove('active');
-//     currentIndex = (currentIndex - 1 + slide.length) % slide.length;
-//     slide[currentIndex].classList.add('active');
-//     updateIndicator();
-//     slideTimer = setInterval(nextSlide, 8000);
-//   });
-// }
 
 // 2. product-grid 드래그 기능 (보강)
 const sliders = document.querySelectorAll(".product-grid");
@@ -188,4 +132,43 @@ document.addEventListener('click', (e) => {
   if (!searchContainer.contains(e.target) && searchContainer.classList.contains('active')) {
     searchContainer.classList.remove('active');
   }
+});
+
+// 검색 팝업 기능
+document.addEventListener('DOMContentLoaded', () => {
+    const searchTrigger = document.getElementById('search-trigger');
+    const searchPopup = document.getElementById('search-popup');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('close-popup');
+
+    // Function to open the popup
+    const openPopup = (e) => {
+        if (e) e.preventDefault();
+        searchPopup.classList.add('On');
+        overlay.classList.add('On');
+        // Prevent scrolling while popup is open
+        document.body.style.overflow = 'hidden';
+    };
+
+    // Function to close the popup
+    const closePopup = () => {
+        searchPopup.classList.remove('On');
+        overlay.classList.remove('On');
+        // Restore scrolling
+        document.body.style.overflow = '';
+    };
+
+    // Click events
+    searchTrigger.addEventListener('click', openPopup);
+    closeBtn.addEventListener('click', closePopup);
+    
+    // Close when clicking the background overlay
+    overlay.addEventListener('click', closePopup);
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closePopup();
+        }
+    });
 });

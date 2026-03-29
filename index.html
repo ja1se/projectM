@@ -72,6 +72,43 @@
       <i class="fa-solid fa-xmark" style="color: #fff;"></i>
     </button>
   </div>
+  <!-- The search popup -->
+    <div id="search-popup" class="search-popup">
+        <div class="popup-content">
+            <div class="columns-wrapper">
+                <!-- Left Column: Recent Search -->
+                <div class="column left-column">
+                    <h3>최근 검색어</h3>
+                    <div class="empty-state">
+                        <p>최근 검색어가 없습니다.</p>
+                    </div>
+                </div>
+                <!-- Right Column: Popular Search -->
+                <div class="column right-column">
+                    <div class="column-header">
+                        <h3>인기 검색어</h3>
+                        <span class="update-info">10:00 업데이트</span>
+                    </div>
+                    <ol class="popular-list">
+                        <li><span class="rank">1</span><span class="text">더블지퍼</span><span class="trend">—</span></li>
+                        <li><span class="rank">2</span><span class="text">봉투형 케이스</span><span class="trend">—</span></li>
+                        <li><span class="rank">3</span><span class="text">와이드</span><span class="trend">—</span></li>
+                        <li><span class="rank">4</span><span class="text">케이스</span><span class="trend">—</span></li>
+                        <li><span class="rank">5</span><span class="text">티슈</span><span class="trend">—</span></li>
+                        <li><span class="rank">6</span><span class="text">용기 리필용</span><span class="trend">—</span></li>
+                        <li><span class="rank">7</span><span class="text">발수</span><span class="trend">—</span></li>
+                        <li><span class="rank">8</span><span class="text">케이스</span><span class="trend">—</span></li>
+                        <li><span class="rank">9</span><span class="text">더블</span><span class="trend">—</span></li>
+                        <li><span class="rank">10</span><span class="text">cd</span><span class="trend">—</span></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button id="close-popup" class="close-button-s">검색 닫기</button>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
   <!-- Header -->
   <header class="header">
     <div class="logo">
@@ -80,7 +117,7 @@
     <div class="header-actions">
       <div class="search-container">
         <input type="text" class="search-input" />
-        <button class="icon-button search-button" aria-label="검색">
+        <button class="icon-button search-button" id="search-trigger" aria-label="검색">
           <img src="images/icon-search.svg" alt="" />
         </button>
       </div>
