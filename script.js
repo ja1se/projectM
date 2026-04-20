@@ -33,7 +33,7 @@ window.addEventListener('scroll', () => {
   lastScrollY = currentScrollY;
 });
 
-// 2. product-grid 드래그 기능 (보강)
+// product-grid 드래그 기능
 const sliders = document.querySelectorAll(".product-grid");
 
 sliders.forEach((slider) => {
@@ -43,7 +43,7 @@ sliders.forEach((slider) => {
 
   slider.addEventListener("mousedown", (e) => {
     isDown = true;
-    slider.style.scrollBehavior = "auto"; // 드래그 시 smooth 끄기
+    slider.style.scrollBehavior = "auto";
     startX = e.pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
   });
@@ -54,7 +54,7 @@ sliders.forEach((slider) => {
 
   slider.addEventListener("mouseup", () => {
     isDown = false;
-    slider.style.scrollBehavior = "smooth"; // 다시 smooth 켜기
+    slider.style.scrollBehavior = "smooth";
   });
 
   slider.addEventListener("mousemove", (e) => {
@@ -66,7 +66,7 @@ sliders.forEach((slider) => {
   });
 });
 
-// 3. 탭 메뉴 기능
+// 탭 메뉴 기능
 const tabs = document.querySelectorAll(".tab");
 const contents = document.querySelectorAll(".tab-content");
 
@@ -75,7 +75,7 @@ tabs.forEach((tab) => {
     const targetId = tab.dataset.tab;
     const targetContent = document.getElementById(targetId);
 
-    if (!targetContent) return; // ID가 없으면 실행 안 함
+    if (!targetContent) return;
 
     tabs.forEach((t) => t.classList.remove("active"));
     contents.forEach((c) => c.classList.remove("active"));
@@ -87,7 +87,7 @@ tabs.forEach((tab) => {
   });
 });
 
-// 4. 카테고리
+// 카테고리
 const categorySwiper = new Swiper(".category-swiper", {
   slidesPerView: 5, // 모바일 기본 개수
   spaceBetween: 20, // 아이템 사이 간격
@@ -102,19 +102,19 @@ const categorySwiper = new Swiper(".category-swiper", {
       slidesPerView: 8, // 태블릿
     },
     1024: {
-      slidesPerView: 10, // 데스크탑 (사진처럼 한 줄에 다 보임)
+      slidesPerView: 10, // 데스크탑 (한 줄에 다 보임)
     },
   },
 });
 
-// 5. 푸터
+// 푸터
 const infoToggle = document.querySelector(".footer-column.center");
 infoToggle.addEventListener("click", function () {
   document.querySelector(".social-links").style.display = "none";
   this.classList.toggle("active");
 });
 
-// 6. 검색창 토글
+// 검색창 토글
 const searchButton = document.querySelector('.search-button');
 const searchContainer = document.querySelector('.search-container');
 const searchInput = document.querySelector('.search-input');
@@ -171,4 +171,47 @@ document.addEventListener('DOMContentLoaded', () => {
             closePopup();
         }
     });
+});
+
+// 앱 배너 닫기 기능
+document.addEventListener('DOMContentLoaded', () => {
+  const appBanner = document.querySelector('.app-banner');
+  const closeButton = appBanner ? appBanner.querySelector('.close-button') : null;
+
+  if (appBanner && closeButton) {
+    closeButton.addEventListener('click', () => {
+      appBanner.classList.add('hide');
+    });
+  }
+});
+
+// 맨 위로 가기 버튼 기능
+document.addEventListener('DOMContentLoaded', () => {
+  const topBtn = document.querySelector('.top-btn');
+
+  if (topBtn) {
+    // 클릭 시 맨 위로 스크롤
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // 스크롤 위치에 따른 버튼 표시 제어
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        topBtn.style.opacity = '1';
+        topBtn.style.visibility = 'visible';
+      } else {
+        topBtn.style.opacity = '0';
+        topBtn.style.visibility = 'hidden';
+      }
+    });
+    
+    // 초기 상태 설정
+    topBtn.style.transition = 'opacity 0.3s, visibility 0.3s';
+    topBtn.style.opacity = '0';
+    topBtn.style.visibility = 'hidden';
+  }
 });
